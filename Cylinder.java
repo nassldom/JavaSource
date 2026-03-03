@@ -1,9 +1,9 @@
-public class Cone {
+public class Cylinder {
 
     private double radius;
     private double height;
 
-    public Cone(double radius, double height) {
+    public Cylinder(double radius, double height) {
         this.radius = radius;
         this.height = height;
     }
@@ -24,14 +24,16 @@ public class Cone {
         this.height = height;
     }
 
-    // Oberfläche des Kegels (Mantel + Grundfläche)
+    // Oberfläche des Zylinders
     public double area() {
-        double s = Math.sqrt(radius * radius + height * height); // Mantellinie
-        return Math.PI * radius * radius + Math.PI * radius * s;
+        // 2πr² + 2πrh
+        return 2.0 * Math.PI * radius * radius
+             + 2.0 * Math.PI * radius * height;
     }
 
-    // Volumen des Kegels
+    // Volumen des Zylinders
     public double volume() {
-        return Math.PI * radius * radius * height / 3.0;
+        // πr²h
+        return Math.PI * radius * radius * height;
     }
 }
