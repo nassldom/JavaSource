@@ -18,7 +18,7 @@ public class ContinousInterest
 		principal = scan.nextDouble();
 
 		// calculate the amount after years of growth
-		amount = principal*Math.exp(rate*years);
+		amount = principal*Math.exp(rate*years);			// principal * e^(rt)
 		
 		// write out the result
 		System.out.println("current amount: " + amount);
