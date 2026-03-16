@@ -1,0 +1,140 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Launch TestFX",
+      "request": "launch",
+      "mainClass": "TestFX",
+      "vmArgs": "--module-path \"C:/Program Files/Java/jdk-25/lib/javafx-sdk-25.0.2/lib\" --add-modules javafx.controls,javafx.graphics"
+    },
+    {
+      "type": "java",
+      "name": "Launch CircleScene",
+      "request": "launch",
+      "mainClass": "CircleScene",
+      "vmArgs": "--module-path \"C:/Program Files/Java/jdk-25/lib/javafx-sdk-25.0.2/lib\" --add-modules javafx.controls,javafx.graphics"
+    },
+    {
+      "type": "java",
+      "name": "Launch CircleOverlap",
+      "request": "launch",
+      "mainClass": "CircleOverlap",
+      "vmArgs": "--module-path \"C:/Program Files/Java/jdk-25/lib/javafx-sdk-25.0.2/lib\" --add-modules javafx.controls,javafx.graphics"
+    },
+    {
+      "type": "java",
+      "name": "Launch CircleDarker",
+      "request": "launch",
+      "mainClass": "CircleDarker",
+      "vmArgs": "--module-path \"C:/Program Files/Java/jdk-25/lib/javafx-sdk-25.0.2/lib\" --add-modules javafx.controls,javafx.graphics"
+    },
+    {
+      "type": "java",
+      "name": "Launch NestedRectangle",
+      "request": "launch",
+      "mainClass": "NestedRectangle",
+      "vmArgs": "--module-path \"C:/Program Files/Java/jdk-25/lib/javafx-sdk-25.0.2/lib\" --add-modules javafx.controls,javafx.graphics"
+    },
+    {
+      "type": "java",
+      "name": "Launch RandomLines",
+      "request": "launch",
+      "mainClass": "RandomLines",
+      "vmArgs": "--module-path \"C:/Program Files/Java/jdk-25/lib/javafx-sdk-25.0.2/lib\" --add-modules javafx.controls,javafx.graphics"
+    },
+    {
+      "type": "java",
+      "name": "Launch EllipseTable",
+      "request": "launch",
+      "mainClass": "EllipseTable",
+      "vmArgs": "--module-path \"C:/Program Files/Java/jdk-25/lib/javafx-sdk-25.0.2/lib\" --add-modules javafx.controls,javafx.graphics"
+    },
+    {
+      "type": "java",
+      "name": "Launch ArcSimple",
+      "request": "launch",
+      "mainClass": "ArcSimple",
+      "vmArgs": "--module-path \"C:/Program Files/Java/jdk-25/lib/javafx-sdk-25.0.2/lib\" --add-modules javafx.controls,javafx.graphics"
+    },
+    {
+      "type": "java",
+      "name": "Launch PacMan",
+      "request": "launch",
+      "mainClass": "PacMan",
+      "vmArgs": "--module-path \"C:/Program Files/Java/jdk-25/lib/javafx-sdk-25.0.2/lib\" --add-modules javafx.controls,javafx.graphics"
+    },
+    {
+      "type": "java",
+      "name": "Launch TriangleSimple",
+      "request": "launch",
+      "mainClass": "TriangleSimple",
+      "vmArgs": "--module-path \"C:/Program Files/Java/jdk-25/lib/javafx-sdk-25.0.2/lib\" --add-modules javafx.controls,javafx.graphics"
+    },
+    {
+      "type": "java",
+      "name": "Launch TriangleDemo",
+      "request": "launch",
+      "mainClass": "TriangleDemo",
+      "vmArgs": "--module-path \"C:/Program Files/Java/jdk-25/lib/javafx-sdk-25.0.2/lib\" --add-modules javafx.controls,javafx.graphics"
+    },
+    {
+      "type": "java",
+      "name": "Launch RegularPolygon",
+      "request": "launch",
+      "mainClass": "RegularPolygon",
+      "vmArgs": "--module-path \"C:/Program Files/Java/jdk-25/lib/javafx-sdk-25.0.2/lib\" --add-modules javafx.controls,javafx.graphics"
+    },
+    {
+      "type": "java",
+      "name": "Launch PolygonSnake",
+      "request": "launch",
+      "mainClass": "PolygonSnake",
+      "vmArgs": "--module-path \"C:/Program Files/Java/jdk-25/lib/javafx-sdk-25.0.2/lib\" --add-modules javafx.controls,javafx.graphics"
+    },
+    {
+      "type": "java",
+      "name": "Launch PolylineDemo",
+      "request": "launch",
+      "mainClass": "PolylineDemo",
+      "vmArgs": "--module-path \"C:/Program Files/Java/jdk-25/lib/javafx-sdk-25.0.2/lib\" --add-modules javafx.controls,javafx.graphics"
+    },
+    {
+      "type": "java",
+      "name": "Launch TextDemo",
+      "request": "launch",
+      "mainClass": "TextDemo",
+      "vmArgs": "--module-path \"C:/Program Files/Java/jdk-25/lib/javafx-sdk-25.0.2/lib\" --add-modules javafx.controls,javafx.graphics"
+    },
+    {
+      "type": "java",
+      "name": "Launch EllipseRotate",
+      "request": "launch",
+      "mainClass": "EllipseRotate",
+      "vmArgs": "--module-path \"C:/Program Files/Java/jdk-25/lib/javafx-sdk-25.0.2/lib\" --add-modules javafx.controls,javafx.graphics"
+    },
+    {
+      "type": "java",
+      "name": "Launch Emoji",
+      "request": "launch",
+      "mainClass": "Emoji",
+      "vmArgs": "--module-path \"C:/Program Files/Java/jdk-25/lib/javafx-sdk-25.0.2/lib\" --add-modules javafx.controls,javafx.graphics"
+    },
+    {
+      "type": "java",
+      "name": "Launch EmojiStackPane",
+      "request": "launch",
+      "mainClass": "EmojiStackPane",
+      "vmArgs": "--module-path \"C:/Program Files/Java/jdk-25/lib/javafx-sdk-25.0.2/lib\" --add-modules javafx.controls,javafx.graphics"
+    },
+    {
+      "type": "java",
+      "name": "Launch EmojiAsGroup",
+      "request": "launch",
+      "mainClass": "EmojiAsGroup",
+      "vmArgs": "--module-path \"C:/Program Files/Java/jdk-25/lib/javafx-sdk-25.0.2/lib\" --add-modules javafx.controls,javafx.graphics"
+    }
+
+
+  ]
+}
