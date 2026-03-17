@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Circumference",
+      "request": "launch",
+      "mainClass": "Circumference",
+      "projectName": "JavaSource_580e1ef4"
+    },
+    {
+      "type": "java",
       "name": "Launch TestFX",
       "request": "launch",
       "mainClass": "TestFX",
@@ -134,7 +141,5 @@
       "mainClass": "EmojiAsGroup",
       "vmArgs": "--module-path \"C:/Program Files/Java/jdk-25/lib/javafx-sdk-25.0.2/lib\" --add-modules javafx.controls,javafx.graphics"
     }
-
-
   ]
 }
