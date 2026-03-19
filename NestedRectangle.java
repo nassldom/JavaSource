@@ -9,8 +9,8 @@ public class NestedRectangle extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        double sceneWidth = 300, sceneHeight = sceneWidth * 0.75,
-               sceneCenterX = sceneWidth / 2, sceneCenterY = sceneHeight / 2;
+        double sceneWidth = 300, sceneHeight = sceneWidth * 0.75;
+               // sceneCenterX = sceneWidth / 2, sceneCenterY = sceneHeight / 2;
 
         double rectWidth, rectHeight;
         double x, y;

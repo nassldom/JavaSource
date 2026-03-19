@@ -1,4 +1,3 @@
-import java.awt.*;
 class EqualsDemo4
 {
   public static void main ( String arg[] )

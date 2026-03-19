@@ -23,5 +23,7 @@ public class CookieChecker
 			System.out.println("Enough for cookies!");
 		else
 			System.out.println("sorry...");
+
+		scan.close();
 	}
 }

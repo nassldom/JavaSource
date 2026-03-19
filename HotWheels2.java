@@ -6,7 +6,7 @@ public class HotWheels2
 	{
 		Scanner scan = new Scanner(System.in);
 		
-		String inData;
+	
 		int cash, credit, debt;
 
 // get the cash
@@ -30,5 +30,7 @@ public class HotWheels2
 			System.out.println("Enough to buy this car!");		
 		else
 			System.out.println("Have you considered a Yugo?");
+
+		scan.close();
 	}
 }

@@ -38,7 +38,8 @@ public class TinyDictionary
 
             System.out.println("Word: ");
             key = scan.next();
-        }    
+        }
+        scan.close();    
     }
     
 }

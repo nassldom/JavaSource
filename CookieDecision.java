@@ -19,5 +19,7 @@ public class CookieDecision
       System.out.println("Buy cookies!"  );
 
     System.out.println("Continue down the Mall.");
+
+    scan.close();
   }
 }

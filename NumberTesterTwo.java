@@ -31,5 +31,7 @@ public class NumberTesterTwo
     }
 
     System.out.println("Good-bye for now");    // always executed
+
+    scan.close();
   }
 }

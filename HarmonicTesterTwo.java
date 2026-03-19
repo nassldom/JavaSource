@@ -18,5 +18,7 @@ public class HarmonicTesterTwo
 		}
 
 		System.out.println("Sum of " + limit + " terms:" + sum);
+
+		scan.close();
 	}
 }

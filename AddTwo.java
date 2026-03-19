@@ -16,5 +16,7 @@ public class AddTwo
 		sum = first + second;                            // add the two ints, put result in sum
 
 		System.out.println("The sum of " + first + " plus " + second + " is " + sum);
+
+		scan.close();
 	}
 }

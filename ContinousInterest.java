@@ -22,5 +22,7 @@ public class ContinousInterest
 		
 		// write out the result
 		System.out.println("current amount: " + amount);
+
+		scan.close();
 	}
 }

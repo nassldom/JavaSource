@@ -20,6 +20,8 @@ public class UserInput
         sum = a.add( b );
 
         System.out.println("Sum:             " + sum );
+
+        scan.close();
         
     }
     

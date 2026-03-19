@@ -25,7 +25,9 @@ public class EvalPolyTwo
 
        // Ask the user if the program should continue.
        System.out.println("continue (y or n)?");
-       response = scan.next();      
+       response = scan.next();  
+       
+       scan.close();
     }
 
   }

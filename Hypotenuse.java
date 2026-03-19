@@ -25,6 +25,8 @@ public class Hypotenuse
         {
             System.out.println("Please enter positive numbers for the legs.");
         }
+
+        scan.close();
     }
     
 }

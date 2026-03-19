@@ -17,5 +17,7 @@ public class EvalSqrt
 			System.out.print("Enter a value for x or -1 to exit: ");
 			x = scan.nextDouble();
 		}
+
+		scan.close();
 	}
 }

@@ -25,5 +25,7 @@ public class HotWheels
 			System.out.println("Enough to buy this car!");
 		else
 			System.out.println("What about a Yugo?");
+
+		scan.close();
 	}
 }	

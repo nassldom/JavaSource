@@ -67,6 +67,8 @@ public class PhoneBookTest
       System.out.println();
       System.out.print("Enter name -->") ;
       name = scan.next();
+
+      scan.close();
     }
  
   }

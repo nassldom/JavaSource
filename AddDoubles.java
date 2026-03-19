@@ -18,5 +18,7 @@ public class AddDoubles
 		// Compute the sum and write it out
 		sum = first + second;
 		System.out.print("Sum: " + sum);
+
+		scan.close();
 	}
 }

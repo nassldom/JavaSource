@@ -16,5 +16,7 @@ class ColumnCheck
 			if( line.length() > colNum && line.charAt( colNum ) != ' ' )
 				System.out.println( counter + ":t" + line );
 		}
+
+		scan.close();
 	}
 }

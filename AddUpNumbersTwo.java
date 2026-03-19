@@ -33,5 +33,7 @@ public class AddUpNumbersTwo
 			value = scan.nextInt();
 		}
 		System.out.println("Sum of the integers: " + sum);
+
+		scan.close();
 	}
 }

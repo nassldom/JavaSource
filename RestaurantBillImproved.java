@@ -15,5 +15,7 @@ public class RestaurantBillImproved
 
 		System.out.println("basic cost: " + basicCost + " total cost: " +
 			(basicCost + basicCost*0.06 + basicCost*tipPercent) );				// 20% tip and 6% taxes
+
+		scan.close();
 	}
 }

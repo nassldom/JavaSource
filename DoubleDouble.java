@@ -11,5 +11,7 @@ public class DoubleDouble
 		value = scan.nextDouble();
 
 		System.out.println("value: " + value + " twice value: " + 2.0*value);
+
+		scan.close();
 	}
 }

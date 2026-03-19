@@ -22,5 +22,6 @@ public class IntDivideTest
     		System.out.println( dividend + " % " + divisor + " is " + remainder );
     		System.out.println( quotient + " * " + divisor + 
   	      		" + " + remainder + " is " + (quotient*divisor+remainder) );
+		scan.close();		
  	 }
 }

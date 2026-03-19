@@ -12,5 +12,7 @@ public class EchoSquare
 		square = num * num;                        // compute the square
 
 		System.out.println("The square of " + num + " is " + square);
+
+		scan.close(); 
 	}
 }

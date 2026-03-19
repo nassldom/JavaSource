@@ -14,5 +14,6 @@
         "c:\\Program Files\\Java\\jdk-25\\lib\\javafx-sdk-25.0.2\\lib\\jfx.incubator.input.jar",
         "c:\\Program Files\\Java\\jdk-25\\lib\\javafx-sdk-25.0.2\\lib\\jfx.incubator.richtext.jar",
         "c:\\Program Files\\Java\\jdk-25\\lib\\javafx-sdk-25.0.2\\lib\\javafx.base.jar"
-    ]
+    ],
+    "java.debug.settings.onBuildFailureProceed": true
 }

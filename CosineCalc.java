@@ -15,5 +15,7 @@ public class CosineCalc
 
 		// write out the result
 		System.out.println("cosine: " + result);
+
+		scan.close();
 	}
 }

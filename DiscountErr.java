@@ -21,5 +21,7 @@ public class DiscountErr
 
     System.out.println( "Discount Price: " + discountPrice );    // send to disk file
     System.err.println( "Discount Price: " + discountPrice );    // send to monitor
+
+    scan.close();
   }
 }

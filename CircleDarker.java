@@ -1,7 +1,6 @@
 import javafx.application.*;  
 import javafx.stage.*;        
-import javafx.scene.Scene;  
-import javafx.scene.Group;  
+import javafx.scene.Scene;   
 import javafx.scene.layout.*;  
 import javafx.scene.shape.*; 
 import javafx.scene.paint.*;  

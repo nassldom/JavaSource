@@ -19,6 +19,8 @@ public class Discount
         discountPrice = listPrice - (listPrice * discount) / 100;
 
         System.out.println("Discount Price: " + discountPrice );
+
+        scan.close();
     }
     
 }

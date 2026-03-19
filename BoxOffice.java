@@ -19,6 +19,8 @@ public class BoxOffice
 			System.out.println("Adult rate.");			     		
 		}
 		System.out.println("Enjoy the show.");
+
+		scan.close();
 	}
 
 }

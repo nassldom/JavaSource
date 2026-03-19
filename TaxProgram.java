@@ -16,6 +16,8 @@ public class TaxProgram
 		else
 			tax = 0.0;
 		System.out.println("Item cost: " + price + " Tax: " + tax + " Total: " + (price+tax));
+
+		scan.close();
 	}
 
 }

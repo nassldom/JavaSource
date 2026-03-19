@@ -22,7 +22,7 @@ class PrimeTester
   {
     Scanner scan = new Scanner( System.in );
     String input;
-    BigInteger suspect, trial;
+    BigInteger suspect;
     
     System.out.print("Suspected Prime: ");
     input = scan.next();
@@ -32,6 +32,8 @@ class PrimeTester
       System.out.println("This is a prime" );
     else      
       System.out.println("This is a composite" );
+
+    scan.close();
   }
 
 }

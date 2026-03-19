@@ -17,5 +17,7 @@ public class SweaterPurchase
 		}
 		else
 			System.out.println("You can buy the sweater.");
+
+		scan.close();
 	}	
 }

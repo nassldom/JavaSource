@@ -9,5 +9,7 @@ public class ImportDemo03
     scan = new Scanner( System.in );
     
     // do something with the Scanner object (see next chapter)
+
+    scan.close();
   }
 }

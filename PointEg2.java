@@ -1,4 +1,4 @@
-import java.awt.*;
+
 class PointEg2
 {
 
@@ -15,5 +15,9 @@ class PointEg2
     String strA = a.toString(); // create a String object based on the data
                                 // found in the object referenced by "a".
     System.out.println( strA );
+
+    System.out.println(a.toString());
+    System.out.println(b.toString());  // b benutzt
+    System.out.println(c.toString());  // c benutzt
   }
 }

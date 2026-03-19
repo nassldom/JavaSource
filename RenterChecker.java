@@ -22,5 +22,7 @@ public class RenterChecker
 			System.out.println("Enough to rent this car!");
 		else
 			System.out.println("Have you considered a bicycle?");
+
+		scan.close();
 	}
 }

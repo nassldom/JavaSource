@@ -22,5 +22,7 @@ public class HotHouse
 			System.out.println("House passes the code requirements!");
 		else
 			System.out.println("House fails.");
+
+		scan.close();
 	}
 }	

@@ -44,5 +44,6 @@ public class TestGroupsSentinel
       System.out.println( "Group B  has no students" );
       
     scan.close();
+    user.close();
   }
 }

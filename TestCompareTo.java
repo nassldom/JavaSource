@@ -30,5 +30,14 @@ class TestCompareTo
     if ( A.compareTo(B) < 0 ) System.out.println("Negative");
     if ( A.compareTo(B) > 0 ) System.out.println("Positive");
     System.out.println(  A + ".equals(" + B + ") is " + A.equals(B) );
+
+    A = appleA; B = cherry;
+    System.out.print(  A + ".compareTo(" + B + ") returns ");
+    if ( A.compareTo(B) == 0) System.out.println("Zero");
+    if ( A.compareTo(B) < 0 ) System.out.println("Negative");
+    if ( A.compareTo(B) > 0 ) System.out.println("Positive");
+    System.out.println(  A + ".equals(" + B + ") is " + A.equals(B) );
+    System.out.println();
+
  }
 }

@@ -13,5 +13,7 @@ public class RainTester
 			System.out.println("Wipers On");		// true branch
 		else
 			System.out.println("Wipers Off");		// false branch
+
+		scan.close();
 	}
 }

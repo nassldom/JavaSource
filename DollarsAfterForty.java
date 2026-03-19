@@ -29,6 +29,8 @@ public class DollarsAfterForty
 		}
 		System.out.println("After 40 years at " + rate*100
 			+ " percent interest you will have " + dollars + " dollars");
+
+		scan.close();
 	}
 }
 

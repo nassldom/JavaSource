@@ -74,6 +74,7 @@ public class CardTester
 
         Valentine val = new Valentine( me, 7 );
         val.greeting();
+        
 
         // ====== POLYMORPHISMUS-BEISPIEL ======
         Card card;  // Referenz vom Typ Card
@@ -93,7 +94,7 @@ public class CardTester
         // instanceof-Beispiel mit Object:
         Object obj;
         YouthBirthday ybd = new YouthBirthday( "Ian", 4, me );
-        String str = "Yertle";
+        
 
         obj = ybd;  // impliziter Cast von YouthBirthday zu Object
 
@@ -102,6 +103,10 @@ public class CardTester
 
         else if ( obj instanceof String )
             System.out.println( ( String ) obj );
+
+        input.close();
+
+            
     }
 }
 
@@ -121,5 +126,6 @@ class YouthBirthday extends Birthday
         super.greeting();
         System.out.println( "How you have grown!!\n" );
         System.out.println( "Love, " + sender + "\n" );
+        
     }
 }

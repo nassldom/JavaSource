@@ -17,5 +17,7 @@ public class TestCone
         Cone cone = new Cone(radius, height);
 
         System.out.println("Area " + cone.area() + " Volume " + cone.volume());
+
+        scan.close();
     }   
 }

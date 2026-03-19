@@ -6,7 +6,7 @@ public class EvalPoly
 	{
 		Scanner scan = new Scanner(System.in);
 
-		double x;				// a value to use with the polynomial
+		
 		String response = "y";			// "y" or "n"
 
 		while (response.equals("y"))
@@ -20,6 +20,8 @@ public class EvalPoly
 			System.out.println("continue (y or n)?: ");
 
 			response = scan.next();
+
+			scan.close();
 		}
 	}
 }

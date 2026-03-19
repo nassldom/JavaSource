@@ -24,5 +24,7 @@ public class LoopExample
 			count = count + 1;
 		}
 		System.out.println("Done with the loop");
+
+		scan.close();
 	}
 }

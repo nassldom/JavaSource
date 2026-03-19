@@ -23,6 +23,8 @@ public class AddUpNumbers
 			value = scan.nextInt();
 		}
 		System.out.println("Sum of the integers: " + sum);
+
+		scan.close();
 	}
 }
 			

@@ -25,5 +25,7 @@ class RemainderDemo
     System.out.println( a + " remainder " + divisor + " == " + r);
     System.out.println( q + " multiply  " + divisor +  " add " + r + " == " 
         + (q.multiply(divisor)).add(r) );
+
+    scan.close();
   }
 }

@@ -20,5 +20,7 @@ public class TaxGouge
 			System.out.println("In the 28% bracket.");
 		else
 			System.out.println("Time for a tax audit!");
+
+		scan.close();
 	}
 }

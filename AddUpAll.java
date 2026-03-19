@@ -30,5 +30,6 @@ public class AddUpAll
 
     System.out.println( "Grand Total: " + sum );
     scan.close();
+    user.close();
   }
 }

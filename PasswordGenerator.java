@@ -34,5 +34,7 @@ public class PasswordGenerator
 			j = j + 1;
 		}
 		System.out.println("Here is your password: " + password);
+
+		scan.close();
 	}
 }

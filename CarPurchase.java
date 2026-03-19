@@ -28,6 +28,8 @@ public class CarPurchase
 		}
 
 		System.out.println("Total cost is: $" + totalCoast);
+
+		scan.close();
 	}
 }
 

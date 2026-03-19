@@ -16,5 +16,7 @@ public class SquareRoot
 
 		// Write out the result
 		System.out.println("square root: " + result);
+
+		scan.close();
 	}
 }

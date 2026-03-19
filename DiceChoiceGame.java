@@ -55,6 +55,8 @@ public class DiceChoiceGame
       System.out.println("The Computer Wins!");
     else
       System.out.println("You Win the Game!");
+
+    scan.close();
     
   }
 }

@@ -25,5 +25,7 @@ public class SquareRootThree
 		{
 			System.out.println("Please enter a positive number");
 		}
+
+		scan.close();
 	}
 }

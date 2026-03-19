@@ -1,4 +1,4 @@
-import java.awt.*;
+
 class PointEg4
 {
 

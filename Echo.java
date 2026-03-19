@@ -11,5 +11,7 @@ public class Echo
     inData = scan.nextLine();
 
     System.out.println("You entered:" + inData );
+
+    scan.close();
   }
 }

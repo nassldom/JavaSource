@@ -15,5 +15,7 @@ public class MultiEcho
       System.out.println( "You typed: " + line );
       count = count + 1;
     }
+
+    scan.close();
   }
 }

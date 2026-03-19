@@ -1,4 +1,4 @@
-import java.awt.*;      // import the package that contains Point
+
 class PointEg1
 {
 
@@ -12,5 +12,9 @@ class PointEg1
                                 // save the reference in "b"
     c = new Point( b );         // create a Point containing data equivalent
                                 // to the data referenced by "b"
+    System.out.println("a = (" + a.x + ", " + a.y + ")");
+    System.out.println("b = (" + b.x + ", " + b.y + ")");
+    System.out.println("c = (" + c.x + ", " + c.y + ")");
+                            
   }
 }

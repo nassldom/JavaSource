@@ -4,7 +4,6 @@ import javafx.scene.Scene;
 import javafx.scene.shape.*;
 import javafx.scene.paint.Color;
 import javafx.scene.layout.Pane;
-import java.util.Scanner;
 
 public class RegularPolygon extends Application {
 

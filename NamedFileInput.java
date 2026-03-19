@@ -25,5 +25,6 @@ class NamedFileInput
       System.out.println("The square of " + num + " is " + square);
     }
     scan.close();
+    user.close();
   }
 }

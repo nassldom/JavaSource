@@ -33,5 +33,6 @@ public class NamedFileInOut
     // close the files
     scan.close();
     output.close();
+    user.close();
   }
 }

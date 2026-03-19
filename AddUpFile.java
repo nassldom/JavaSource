@@ -18,5 +18,7 @@ class AddUpFile
     }
 
     System.out.println( "Grand Total: " + sum );
+
+    scan.close();
   }
 }

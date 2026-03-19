@@ -3,6 +3,55 @@
   "configurations": [
     {
       "type": "java",
+      "name": "TwoDieToss",
+      "request": "launch",
+      "mainClass": "TwoDieToss",
+      "projectName": "JavaSource_580e1ef4"
+    },
+    {
+      "type": "java",
+      "name": "Hailstoneublic",
+      "request": "launch",
+      "mainClass": "Hailstoneublic",
+      "projectName": "JavaSource_580e1ef4"
+    },
+    {
+      "type": "java",
+      "name": "PyramidTester",
+      "request": "launch",
+      "mainClass": "PyramidTester",
+      "projectName": "JavaSource_580e1ef4"
+    },
+    {
+      "type": "java",
+      "name": "FibonacciTester",
+      "request": "launch",
+      "mainClass": "FibonacciTester",
+      "projectName": "JavaSource_580e1ef4"
+    },
+    {
+      "type": "java",
+      "name": "FactorialTester",
+      "request": "launch",
+      "mainClass": "FactorialTester",
+      "projectName": "JavaSource_580e1ef4"
+    },
+    {
+      "type": "java",
+      "name": "TriangleTester",
+      "request": "launch",
+      "mainClass": "TriangleTester",
+      "projectName": "JavaSource_580e1ef4"
+    },
+    {
+      "type": "java",
+      "name": "Countdown",
+      "request": "launch",
+      "mainClass": "Countdown",
+      "projectName": "JavaSource_580e1ef4"
+    },
+    {
+      "type": "java",
       "name": "Circumference",
       "request": "launch",
       "mainClass": "Circumference",
@@ -140,6 +189,171 @@
       "request": "launch",
       "mainClass": "EmojiAsGroup",
       "vmArgs": "--module-path \"C:/Program Files/Java/jdk-25/lib/javafx-sdk-25.0.2/lib\" --add-modules javafx.controls,javafx.graphics"
+    },
+    {
+      "type": "java",
+      "name": "Launch FibonacciTester",
+      "request": "launch",
+      "mainClass": "FibonacciTester",
+      "args": "20",
+      "vmArgs": ""
+    },
+    {
+      "type": "java",
+      "name": "Launch PyramidTester",
+      "request": "launch",
+      "mainClass": "PyramidTester",
+      "args": "4"
+    },
+    {
+      "type": "java",
+      "name": "Launch Hailstone",
+      "request": "launch",
+      "mainClass": "Hailstone",
+      "args": "7"
+    },
+    {
+      "type": "java",
+      "name": "Launch SquareRootRecursive",
+      "request": "launch",
+      "mainClass": "SquareRootRecursive"
+    },
+    {
+      "type": "java",
+      "name": "Launch ReverseTester",
+      "request": "launch",
+      "mainClass": "ReverseTester"
+    },
+    {
+      "type": "java",
+      "name": "Launch EqualsTester",
+      "request": "launch",
+      "mainClass": "EqualsTester"
+    },
+    {
+      "type": "java",
+      "name": "Launch EqualsICTester",
+      "request": "launch",
+      "mainClass": "EqualsICTester"
+    },
+    {
+      "type": "java",
+      "name": "Launch DrawRectangle",
+      "request": "launch",
+      "mainClass": "DrawRectangle",
+      "vmArgs": "--module-path \"C:/Program Files/Java/jdk-25/lib/javafx-sdk-25.0.2/lib\" --add-modules javafx.controls,javafx.graphics --enable-native-access=javafx.graphics"
+    },
+    {
+      "type": "java",
+      "name": "Launch DrawNestedRectangles",
+      "request": "launch",
+      "mainClass": "DrawNestedRectangles",
+      "vmArgs": "--module-path \"C:/Program Files/Java/jdk-25/lib/javafx-sdk-25.0.2/lib\" --add-modules javafx.controls,javafx.graphics --enable-native-access=javafx.graphics"
+    },
+    {
+      "type": "java",
+      "name": "Launch NestedRectangles",
+      "request": "launch",
+      "mainClass": "NestedRectangles",
+      "vmArgs": "--module-path \"C:/Program Files/Java/jdk-25/lib/javafx-sdk-25.0.2/lib\" --add-modules javafx.controls,javafx.graphics --enable-native-access=javafx.graphics"
+    },
+    {
+      "type": "java",
+      "name": "Launch DrawLine",
+      "request": "launch",
+      "mainClass": "DrawLine",
+      "vmArgs": "--module-path \"C:/Program Files/Java/jdk-25/lib/javafx-sdk-25.0.2/lib\" --add-modules javafx.controls,javafx.graphics --enable-native-access=javafx.graphics"
+    },
+    {
+      "type": "java",
+      "name": "Launch DrawTwoLines",
+      "request": "launch",
+      "mainClass": "DrawTwoLines",
+      "vmArgs": "--module-path \"C:/Program Files/Java/jdk-25/lib/javafx-sdk-25.0.2/lib\" --add-modules javafx.controls,javafx.graphics --enable-native-access=javafx.graphics"
+    },
+    {
+      "type": "java",
+      "name": "Launch DrawLinesRecursive",
+      "request": "launch",
+      "mainClass": "DrawLinesRecursive",
+      "vmArgs": "--module-path \"C:/Program Files/Java/jdk-25/lib/javafx-sdk-25.0.2/lib\" --add-modules javafx.controls,javafx.graphics --enable-native-access=javafx.graphics"
+    },
+    {
+      "type": "java",
+      "name": "Launch OneLineRotate",
+      "request": "launch",
+      "mainClass": "OneLineRotate",
+      "vmArgs": "--module-path \"C:/Program Files/Java/jdk-25/lib/javafx-sdk-25.0.2/lib\" --add-modules javafx.controls,javafx.graphics --enable-native-access=javafx.graphics"
+    },
+    {
+      "type": "java",
+      "name": "Launch DrawBarBell",
+      "request": "launch",
+      "mainClass": "DrawBarBell",
+      "vmArgs": "--module-path \"C:/Program Files/Java/jdk-25/lib/javafx-sdk-25.0.2/lib\" --add-modules javafx.controls,javafx.graphics --enable-native-access=javafx.graphics"
+    },
+    {
+      "type": "java",
+      "name": "Launch OneStar",
+      "request": "launch",
+      "mainClass": "OneStar",
+      "vmArgs": "--module-path \"C:/Program Files/Java/jdk-25/lib/javafx-sdk-25.0.2/lib\" --add-modules javafx.controls,javafx.graphics --enable-native-access=javafx.graphics"
+    },
+    {
+      "type": "java",
+      "name": "Launch JumpingJack",
+      "request": "launch",
+      "mainClass": "JumpingJack",
+      "vmArgs": "--module-path \"C:/Program Files/Java/jdk-25/lib/javafx-sdk-25.0.2/lib\" --add-modules javafx.controls,javafx.graphics --enable-native-access=javafx.graphics"
+    },
+    {
+      "type": "java",
+      "name": "Launch SnowFlake",
+      "request": "launch",
+      "mainClass": "SnowFlake",
+      "vmArgs": "--module-path \"C:/Program Files/Java/jdk-25/lib/javafx-sdk-25.0.2/lib\" --add-modules javafx.controls,javafx.graphics --enable-native-access=javafx.graphics"
+    },
+    {
+      "type": "java",
+      "name": "Launch DrawTriangle",
+      "request": "launch",
+      "mainClass": "DrawTriangle",
+      "vmArgs": "--module-path \"C:/Program Files/Java/jdk-25/lib/javafx-sdk-25.0.2/lib\" --add-modules javafx.controls,javafx.graphics --enable-native-access=javafx.graphics"
+    },
+    {
+      "type": "java",
+      "name": "Launch DrawThreeTriangles",
+      "request": "launch",
+      "mainClass": "DrawThreeTriangles",
+      "vmArgs": "--module-path \"C:/Program Files/Java/jdk-25/lib/javafx-sdk-25.0.2/lib\" --add-modules javafx.controls,javafx.graphics --enable-native-access=javafx.graphics"
+    },
+    {
+      "type": "java",
+      "name": "Launch Sierpinski",
+      "request": "launch",
+      "mainClass": "Sierpinski",
+      "vmArgs": "--module-path \"C:/Program Files/Java/jdk-25/lib/javafx-sdk-25.0.2/lib\" --add-modules javafx.controls,javafx.graphics --enable-native-access=javafx.graphics"
+    },
+    {
+      "type": "java",
+      "name": "Launch LineWithBump",
+      "request": "launch",
+      "mainClass": "LineWithBump",
+      "vmArgs": "--module-path \"C:/Program Files/Java/jdk-25/lib/javafx-sdk-25.0.2/lib\" --add-modules javafx.controls,javafx.graphics --enable-native-access=javafx.graphics"
+    },
+    {
+      "type": "java",
+      "name": "Launch KochLine",
+      "request": "launch",
+      "mainClass": "KochLine",
+      "vmArgs": "--module-path \"C:/Program Files/Java/jdk-25/lib/javafx-sdk-25.0.2/lib\" --add-modules javafx.controls,javafx.graphics --enable-native-access=javafx.graphics"
+    },
+    {
+      "type": "java",
+      "name": "Launch Koch",
+      "request": "launch",
+      "mainClass": "Koch",
+      "vmArgs": "--module-path \"C:/Program Files/Java/jdk-25/lib/javafx-sdk-25.0.2/lib\" --add-modules javafx.controls,javafx.graphics --enable-native-access=javafx.graphics"
     }
   ]
 }
