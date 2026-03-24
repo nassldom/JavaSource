@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "SquareFix",
+      "request": "launch",
+      "mainClass": "SquareFix",
+      "projectName": "JavaSource_580e1ef4"
+    },
+    {
+      "type": "java",
       "name": "TwoDieToss",
       "request": "launch",
       "mainClass": "TwoDieToss",
