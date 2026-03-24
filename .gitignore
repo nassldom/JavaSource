@@ -1,0 +1,7 @@
+# Kompilierte Java-Dateien
+*.class
+
+# Build-Ordner
+bin/
+out/
+build/
