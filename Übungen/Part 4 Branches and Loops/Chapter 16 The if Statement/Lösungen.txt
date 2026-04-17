@@ -1,0 +1,303 @@
+Exercise 1:
+
+import java.util.Scanner;
+
+public class DiscountPrices {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Enter amount of purchases: ");
+        int amountCents = in.nextInt();
+
+        int discountedCents = amountCents;
+        if (amountCents > 1000) { // > 1000 Cent = > 10.00$
+            discountedCents = amountCents * 9 / 10; // 10% discount via integer arith.
+        }
+
+        System.out.println("Discounted price: " + discountedCents);
+    }
+}
+
+Exercise 2:
+
+import java.util.Scanner;
+
+public class OrderChecker {
+    public static void main(String[] args) {
+        final int boltPrice = 5;
+        final int nutPrice   = 3;
+        final int washerPrice = 1;
+
+        Scanner in = new Scanner(System.in);
+
+        System.out.print("Number of bolts: ");
+        int bolts = in.nextInt();
+        System.out.print("Number of nuts: ");
+        int nuts = in.nextInt();
+        System.out.print("Number of washers: ");
+        int washers = in.nextInt();
+
+        int totalCost = bolts * boltPrice
+                      + nuts * nutPrice
+                      + washers * washerPrice;
+
+        boolean tooFewNuts    = nuts < bolts;
+        boolean tooFewWashers = washers < 2 * bolts;
+
+        if (tooFewNuts) {
+            System.out.println("Check the Order: too few nuts");
+        }
+        if (tooFewWashers) {
+            System.out.println("Check the Order: too few washers");
+        }
+        if (!tooFewNuts && !tooFewWashers) {
+            System.out.println("Order is OK.");
+        }
+
+        System.out.println("Total cost: " + totalCost);
+    }
+}
+
+Exercise 3:
+
+import java.util.Scanner;
+
+public class LastChanceGas {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+
+        System.out.print("Tank capacity: ");
+        int capacityGallons = in.nextInt();
+        System.out.print("Gage reading: ");
+        int gaugePercent   = in.nextInt();
+        System.out.print("Miles per gallon: ");
+        int milesPerGallon = in.nextInt();
+
+        int currentGallons = capacityGallons * gaugePercent / 100;
+        int rangeMiles = currentGallons * milesPerGallon;
+
+        if (rangeMiles < 200) {
+            System.out.println("Get Gas!");
+        } else {
+            System.out.println("Safe to Proceed");
+        }
+    }
+}
+
+Exercise 4:
+
+import java.util.Scanner;
+
+public class PieEatingContest {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+
+        System.out.print("Enter contestant's weight: ");
+        int weight = in.nextInt();
+
+        int lowerBound = 220;   // 250 - 30
+        int upperBound = 280;   // 250 + 30
+
+        if (weight >= lowerBound && weight <= upperBound) {
+            System.out.println("Contestant is allowed.");
+        } else {
+            System.out.println("Contestant is not allowed.");
+        }
+    }
+}
+
+Exercise 5:
+
+import java.util.Scanner;
+
+public class GroundBeefValue {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+
+        System.out.print("Price per pound package A: ");
+        double priceA      = in.nextDouble();
+        System.out.print("Percent lean package A: ");
+        double percentLeanA = in.nextDouble() / 100.0;
+
+        System.out.print("Price per pound package B: ");
+        double priceB      = in.nextDouble();
+        System.out.print("Percent lean package B: ");
+        double percentLeanB = in.nextDouble() / 100.0;
+
+        double leanCostA = priceA / percentLeanA;
+        double leanCostB = priceB / percentLeanB;
+
+        System.out.printf("Package A cost per pound of lean: %.1f%n", leanCostA);
+        System.out.printf("Package B cost per pound of lean: %.6f%n", leanCostB);
+
+        if (leanCostA < leanCostB) {
+            System.out.println("Package A is the best value");
+        } else {
+            System.out.println("Package B is the best value");
+        }
+    }
+}
+
+import java.util.Scanner;
+
+public class Y2KDetector {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+
+        System.out.print("Year of Birth: ");
+        int birthYY = in.nextInt();
+        System.out.print("Current year: ");
+        int currYY  = in.nextInt();
+
+        int birthYear = birthYY;
+        int currYear  = currYY;
+
+        if (currYY >= birthYY) {
+            birthYear = birthYY + 1900;
+            currYear  = currYY + 1900;
+        } else {
+            birthYear = birthYY + 1900;
+            currYear  = currYY + 2000;
+        }
+
+        int age = currYear - birthYear;
+        System.out.println("Your age: " + age);
+    }
+}
+
+Exercise 6:
+
+import java.util.Scanner;
+
+public class WindChill {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+
+        System.out.print("Enter Wind Speed: ");
+        double v      = in.nextDouble();
+        System.out.print("Enter Temperature: ");
+        double temp   = in.nextDouble();
+
+        double wci = temp; // default
+
+        if (v >= 3 && temp <= 50.0) {
+            wci = 35.74 + 0.6215 * temp
+                - 35.75 * Math.pow(v, 0.16)
+                + 0.4275 * temp * Math.pow(v, 0.16);
+        }
+
+        System.out.println("Wind Chill: " + wci);
+    }
+}
+
+Exercise 7:
+
+import java.util.Scanner;
+
+public class AgeInSeconds {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+
+        System.out.print("Enter age in years: ");
+        int years  = in.nextInt();
+        System.out.print("Enter age in months: ");
+        int months = in.nextInt();
+        System.out.print("Enter age in days: ");
+        int days   = in.nextInt();
+
+        int[] daysPerMonth = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+
+        int totalDays = 0;
+
+        for (int i = 0; i < months; i++) {
+            totalDays += daysPerMonth[i];
+        }
+
+        totalDays += days;
+        totalDays += years * 365;
+
+        long seconds = (long) totalDays * 24 * 60 * 60;
+        double percentOfLife = 100.0 * seconds / 2_500_000_000.0;
+
+        System.out.println("Your age in seconds: " + seconds);
+        System.out.printf("Percentage of expected lifespan: %.2f%%%n", percentOfLife);
+    }
+}
+
+Exercise 8:
+
+import java.util.Scanner;
+
+public class MatineeTickets {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+
+        System.out.print("Enter age: ");
+        int age = in.nextInt();
+        System.out.print("Enter time (24h, e.g. 1200): ");
+        int time = in.nextInt();
+
+        int price;
+
+        if (age <= 13) {
+            // child
+            if (time < 1700) {
+                price = 2; // matinee child
+            } else {
+                price = 4; // normal child
+            }
+        } else {
+            // adult
+            if (time < 1700) {
+                price = 5; // matinee adult
+            } else {
+                price = 8; // normal adult
+            }
+        }
+
+        System.out.println("Ticket price: $" + price);
+    }
+}
+
+Exercise 9:
+
+import java.util.Scanner;
+
+public class MidnightMadness {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+
+        System.out.print("Enter age: ");
+        int age = in.nextInt();
+        System.out.print("Enter time (24h, e.g. 1200): ");
+        int time = in.nextInt();
+
+        int price;
+
+        if (time > 2200) {
+            if (age <= 13) {
+                System.out.println("Children cannot purchase tickets after 2200.");
+                return;
+            }
+            price = 4; // midnight price
+        } else if (age <= 13) {
+            // child, normal or matinee
+            if (time < 1700) {
+                price = 2; // matinee child
+            } else {
+                price = 4; // normal child
+            }
+        } else {
+            // adult
+            if (time < 1700) {
+                price = 5; // matinee adult
+            } else {
+                price = 8; // normal adult
+            }
+        }
+
+        System.out.println("Ticket price: $" + price);
+    }
+}
+
+
+

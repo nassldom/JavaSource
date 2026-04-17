@@ -1,0 +1,28 @@
+Chapter 132 Programming Exercises
+Exercise 1 — Array to List
+Add a constructor to the class that takes an array of integers as a parameter. The nodes of the linked list get their values from the array. Use insertInOrder() to build the list.
+
+Click here to go back to the main menu.
+
+
+Exercise 2 — Occurence Count
+Modify the Node class so that a node holds both an int value and a count for the number of times it was seen. Modify the program insertInOrder(int value) so that it inserts a new Node with a count of 1 for a new value, but increases the count eath additional time that value is inserted. The traversal part of the program should now print out the value and the count.
+
+Click here to go back to the main menu.
+
+Exercise 3 — Search
+Use the modified linked list that contains a count for each value in the list. Add the method int search( int target ) that searches for a target value and returns the count of the node that contains the target, or -1 if no node contains the target.
+
+Click here to go back to the main menu.
+
+Exercise 4 — copy()
+Add a method to the class that creates a totally new linked list that is a copy of an existing list. The method makes a copy and returns a reference to the new list.
+
+public OrderedLinkedList copy(  OrderedLinkedList original ) 
+Click here to go back to the main menu.
+
+
+Exercise 5 — delete()
+Modify the delete(int value) method so that it decrements the count of the node that contains value or deletes the node if the current count is one.
+
+public int delete( int victim )

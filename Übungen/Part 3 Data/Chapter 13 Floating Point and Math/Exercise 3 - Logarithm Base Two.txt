@@ -1,0 +1,19 @@
+Exercise 3 — Logarithm Base Two
+The base 2 logarithm of a number is defined by:
+
+log2 X = n   if   2n = X
+For example
+
+log2 32 = 5, because 25 = 32
+log2 1024 = 10, because 210 = 1024
+Write a program that inputs a number and outputs its base 2 logarithm. Use floating point input. This problem would be easy, but the Math package does not have a base 2 logarithm method. Instead you have to do this:
+
+log2 X = (loge X) / (loge 2)
+Here, loge X is the natural logarithm of X, which you can compute using
+
+Math.log( X )
+As usual, X is a double. The user enters floating point numbers:
+
+Enter a double:
+998.65
+Base 2 log of 998.65 is 9.963835330516641

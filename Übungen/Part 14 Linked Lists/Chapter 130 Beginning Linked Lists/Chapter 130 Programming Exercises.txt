@@ -1,0 +1,23 @@
+Chapter 130 Programming Exercises
+Exercise 1 — More Nodes
+Modify the program ChainMaker on page 10 so that it creates many more Nodes and links them into a list. The traversal part of the program should work without modification.
+
+Click here to go back to the main menu.
+
+Exercise 2 — Node Number
+Modify the program LinearSearch on page 13 so that it searches for a value entered by the user and the either says that the value is not in the list, or says which node contains the value. The first node in the list is node one, the next is node two and so on.
+
+Click here to go back to the main menu.
+
+Exercise 3 — Count Hits
+Modify the program LinearSearch so that it counts the number of times a value entered by the user occurs in the list.
+
+Click here to go back to the main menu.
+
+Exercise 4 — New Loop
+Modify the program LinearSearch so that the while loop does not use the variable found. This can be a bit tricky. The condition of the while can use the "short-circuit" nature of the && operator. (See chapter 18.)
+
+Click here to go back to the main menu.
+
+Exercise 5 — Search for a String
+Modify the program StringNodeTraverse so that it searches the list for a string entered by the user and says if the string is in the list or not. Use the equals() method of String

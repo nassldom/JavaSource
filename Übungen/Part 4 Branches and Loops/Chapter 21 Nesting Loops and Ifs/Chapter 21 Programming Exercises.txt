@@ -1,0 +1,153 @@
+Chapter 21 Programming Exercises
+
+Exercise 1 — Jet Lag Calculator
+How many days of rest do you need to recover from jet lag? The International Civil Avaiation Organization has a fomula for this:
+
+Hours = number of hours of travel
+Zones = number of time zones crossed
+Depart =
+0, for departures between 8AM and noon
+1, for departures between noon and 6PM
+3, for departures between 6PM and 10PM
+4, for departures between 10PM and 1AM
+5, for departures between 1AM and 8AM
+Arrive =
+4, for arrivals between 8AM and noon
+2, for arrivals between noon and 6PM
+0, for arrivals between 6PM and 10PM
+1, for arrivals between 10PM and 1AM
+3, for arrivals between 1AM and 8AM
+The number of days you need to recover is:
+
+days of recovery = (Hours/2 + (Zones-3) + Depart + Arrive)/10
+For example, say that you are flying from New York Kennedy Airport to London Heathrow. Your flight leaves at 7AM (New York time) and arrives at 7PM (London time).
+
+Hours = 7 (London time is New York time + 5)
+Zones = 4
+Depart = 5
+Arrive = 0
+days of recovery = (7/2 + (4-3) + 5 + 0)/10 = (3.5 + 1 + 5 + 0)/10 = 9.5/10 = 0.95 days
+Write a program that asks the user for the number of hours of travel, the number of time zones crossed, the departure time, and the arrival time and then calculates the number of days needed for recovery. Let the user enter time using a 24 hour clock (so 6PM is 18).
+
+(Formula from Darrell Huff, How to Figure It, Norton, 1996.
+
+Click here to go back to the main menu.
+
+Exercise 2 — Adding up Squares and Cubes
+Write a program that adds up the squares and adds up the cubes of integers from 1 to N, where N is entered by the user:
+
+Upper Limit:
+5
+The sum of Squares is  55
+The sum of Cubes   is  225
+Do this by using just one loop that generates the integers. Of course, if you really needed to calculate these sums you would use the appropriate formulas:
+
+12 + 22 + 32 + ... + n2 = n(n+1)(2n+1)/6
+13 + 23 + 33 + ... + n3 = n2(n+1)2/4
+Add these formulas to your program and print out their results as well as that of the explicit summations.
+
+Click here to go back to the main menu.
+
+Exercise 3 — Power of a number
+Write a program that computes XN where X is a floating point number and N is a positive integer. The program informs the user that N must be positive if the user enters a negative value. Of course,
+
+XN = X * X * X * ... * X       ← N of these
+The user dialog will look something like this:
+
+Enter X
+1.3
+Enter N
+5
+
+1.3 raised to the power 5 is:  3.71293
+
+-------
+
+Enter X
+5.6
+Enter N
+-3
+
+N must be a positive integer.
+Click here to go back to the main menu.
+
+Exercise 4 — Wedge of Stars
+Write a program that writes a wedge of stars. The user enters the initial number of stars, and the program writes out lines of stars. Each line has one few star than the previous line:
+
+Initial number of stars:
+7
+
+*******
+******
+*****
+****
+***
+**
+*
+Click here to go back to the main menu.
+
+Exercise 5 — Pine Tree
+Write a program that writes a tree made of stars on the terminal:
+
+       *
+      ***
+     *****
+    *******
+   *********
+  ***********
+ *************
+***************
+      ***
+      ***
+      ***
+Click here to go back to the main menu.
+
+Exercise 5 — Wallpaper Calculator
+Write a program that calculates how many rolls of wallpaper you need for a room. Assume that the room is a rectangular prism (the usual shape) of specified width, height, and length. Only the walls will be covered with wallpaper. The room may have several openings (windows, doors) which will not be covered. Wallpaper comes in rolls. A single roll of wallpaper is 27 inches wide and 4.5 yards long. Wallpaper is applied to the walls in vertical strips.
+
+Ask the user for the dimensions of the room and the number of openings. Then ask for the dimensions of each opening. Calculate and display the number of full rolls of wallpaper needed.
+
+A quick approximation is to calculate the area of the room to be covered (the area of the walls minus the area of the openings), then divide that by the area covered by a roll of wallpaper. Round up to the nearest integer number of rolls.
+
+A more accurate calculation allows for walls with a width that is not an integer multiple of the standard width of 27 inches. The last strip of wallpaper for a wall may have to be cut from from a standard width strip, wasting the rest of that strip.
+
+Click here to go back to the main menu.
+
+Exercise 6 — Float Factorial
+Change the factorial program so that fact is data type double instead of long. Keep the loop control variable N of type long.
+
+Try to figure out how much larger N can be with this program. Of course, since data type double is not precise there will be accuracy errors with large N. For some applications (such as number theory or code breaking) this would not be acceptable.
+
+To study this problem further, modify the program to calculate N! / (N-1)!. Of course, this should be N. But if you first calculate the factorials, and then divide them, you will only get an approximation to N.
+
+Click here to go back to the main menu.
+
+Exercise 7 — Permutaions
+The formula for the number of permutations of N objects taken R at a time without repitition is
+
+N!/(N-R)!
+Modify the original factorial program (that uses data type long) so that it calculates this value. Ask the user for both N and R where both must be zero or positive and R must be less than or equal to N. Write error messages for incorrect values.
+
+Of course, it would not be sensible to separately calculate N! and (N-R)! and then to divide. Design your program so that it does the minimum number of multiplications needed.
+
+Click here to go back to the main menu.
+
+Exercise 5 — Multiplication Quiz
+Write a program that asks the user 10 single-digit multiplication questions and checks the user's answers for each. The digits are chosen randomly for each run. Use the nextInt() method of class Random to pick random digits.
+
+What is 9 * 2?  18
+Right!
+
+What is 7 * 3?  23
+wrong.  7 * 3 is 21
+
+What is 4 * 6?  24
+Right!
+
+ . . .
+ 
+What is 7 * 5?  30
+wrong. 7 * 5 is 35
+
+You got 7 out of 10 questions correct!
+Each run of the program will be mostly different because the digits in the question are selected randomly. It is possible that the same question might be repeated in one run of the program, but just let this happen.

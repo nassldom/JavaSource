@@ -1,0 +1,50 @@
+Chapter 111 Programming Exercises
+Exercise 1: Sort Doubles
+Modify the InsertionSortTester program in the chapter so that insertionSort() sorts an array of doubles. Further modify it so that only the first prefix number of elements are sorted. The header of the modified method will be:
+
+insertionSort( double[] list, int prefix)
+This is useful when the size of the array in a program does not match the amount of data read in (perhaps from a file.)
+
+Click here to go back to the main menu.
+
+Exercise 2: Random Initialization
+Modify the original InsertionSortTester so that the array is initialized to SIZE number of random integers. Pick a range for the integers, perhaps zero to ten thousand. Ask the user for SIZE. If SIZE is large it is not useful to print out the array, so don't print out the array but include an isSorted() method to say if the array has been sorted. (You will have to modify the method from the original.)
+
+C:\Notes\Sorting>java InsertionSortTesterRandom
+size of the array -->12000
+Before:NOT sorted
+After:SORTED
+Further modify the program so that it determines the time it takes to sort the array:
+
+long startTime = System.currentTimeMillis();
+insertionSort( values );
+long endTime = System.currentTimeMillis();
+System.out.println("Total execution time: " + (endTime - startTime) );
+Puzzle: Further modify the program so it creates a random array, sorts it, prints out the time it takes to sort, and then sorts the array a second time (so it sorts an already sorted array) and prints out the time the second sort took.
+
+Observe the two times. Explain your observation. Compare with a similar observation with selection sort.
+
+Click here to go back to the main menu.
+
+Exercise 3: Median
+Modify the program in Exercise 2 so that it computes the median and average of the values in the array. The median is the value in the array that lies in the middle of all the values: 50% of the values are below or equal to the median, and 50% are above or equal to the median.
+
+So if an array of 11 elements is sorted, the median value would be at index 5 of the array: five elements are to the left of index 5, and five elements are to the right. If the array has an even number of elements, average the two elements in the middle of the array. So if an array of 12 elements is sorted, average the elements at index 5 and index 6. Five elements are left of index 5 and five elements are to the right of index 6.
+
+Print out both the average and median. They will not usually be identical. Now modify the initialization so that every 10th element is selected from a higher range than the others. Perhaps most elements are selected from the range zero to ten thousand, but every 10th element is selected from the range ten thousand to 100 thousand. Compute the average and median and compare them.
+
+Click here to go back to the main menu.
+
+Exercise 4: Algorithm Design: Median
+Exercise 3 computes the median by first sorting the array. This is a lot of work for computing just one value. Design an algorithm to find the median of an array without changing the array and without making a copy of the array Implement your algorithm in Java.
+
+Hint: there is no easy way to do this.
+
+Estimate the running time of your algorithm. Is it a significant improvement on sorting?
+
+Click here to go back to the main menu.
+
+Exercise 5: Algorithm Design: Insertion Sort Variation
+Insertion sort as described in this chapter works by growing a sorted sublist on the left of the array by inserting the element just to the right of the sublist where it belongs. A sublist of size L contains the L smallest elements in the array, in sorted order.
+
+Write an insertion sort where the sorted sublist is on the right of the list. Sorting now works by taking the element just to the left of the sublist and inserting it where it belongs. A sublist of size R contains the R largest elements in the array, in sorted order.

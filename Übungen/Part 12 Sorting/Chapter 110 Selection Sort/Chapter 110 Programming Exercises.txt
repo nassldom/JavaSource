@@ -1,0 +1,49 @@
+Chapter 110 Programming Exercises
+Exercise 1
+Modify the IsSorted program in the chapter. Change the isSorted() method into a int countOut() method that counts the number of pairs in the array that are out of order.
+
+Modify it again to create the method double percentSorted() that computes the percentage of the array that is sorted. Fully sorted should yield 100.0 percent sorted. Descending order should yield 0.0 percent sorted.
+
+Click here to go back to the main menu.
+
+Exercise 2: Random Initialization
+Modify the program SelectionSortTester so that the array is initialized to SIZE number of random integers. Ask the user for SIZE. If SIZE is large it is not useful to print out the array, so don't print out the array but include the isSorted() method to say if the array has been sorted.
+
+C:\Notes\Sorting>java InSortTesterRandom
+size of the array -->12000
+Before:NOT sorted
+After:SORTED
+Further modify the program so that it determines the time it takes to sort the array:
+
+long startTime = System.currentTimeMillis();
+selectionSort( values );
+long endTime = System.currentTimeMillis();
+System.out.println("Total execution time: " + (endTime - startTime) );
+This is more accurate than timing the program with a clock.
+
+Puzzle: Further modify the program so it creates a random array, sorts it, prints out the time it takes to sort, and then sorts the array a second time (so it sorts an already sorted array) and prints out the time the second sort took.
+
+Observe the two times. Explain your observation.
+
+Click here to go back to the main menu.
+
+Exercise 3: Count Duplicates
+Write a method that counts how many integers appear more than once in a sorted array of integers. In other words, if the count is zero, then no integer has appeared twice or more. If the count is one, then some integer has appeared more than once. If the count is N, then N different integers have appeared more than once.
+
+This can be done by scanning through the sorted array once and incrementing a duplicate counter every time an integer appears twice or more in a row. Of course, this only works if the array is sorted. It is much more work to find duplicates in an unsorted array.
+
+Modify the program of exercise 2 so that it asks the user for the size of the array, initializes it to random integers, sorts the array, and then counts the number of duplicates.
+
+Click here to go back to the main menu.
+
+Exercise 4: Count Duplicates (Again)
+Design an algorithm that counts the number of duplicates in an unsorted array of any size. Any valid Java int may appear in the array. Of course, the obvious way to do this is to sort the array and then proceed as with Exercise 3. But sometimes the order of values in an array can't be changed. (For instance, the array might contain the bib numbers of runners in the order that they finished a race.) So now the obvious thing to do is to make a second copy of the array and to sort it.
+
+But this is a lot of work. Design an algorithm that examines an unsorted array and counts the number of duplicates without making a second copy of the array.
+
+Click here to go back to the main menu.
+
+Exercise 5: Count Duplicates (Yet Again)
+Say that you want to count the number of integers that appear more than once in an unsorted array of any size. But now you know that the integers are all in the range 0 to 100. Design an algorithm that determines which integers appear more than once.
+
+Of course, this is tremendously easier than the previous problem.

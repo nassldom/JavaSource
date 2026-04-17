@@ -1,0 +1,77 @@
+Chapter 20 Programming Exercises
+Exercise 1 — Adding up Integers
+Write a program that adds up integers that the user enters. First the programs asks how many numbers will be added up. Then the program prompts the user for each number. Finally it prints the sum.
+
+How many integers will be added:
+5
+Enter an integer:
+3
+Enter an integer:
+4
+Enter an integer:
+-4
+Enter an integer:
+-3
+Enter an integer:
+7
+
+The sum is 7
+Be careful not to add the number of integers (in the example, 5) into the sum.
+
+Click here to go back to the main menu.
+
+Exercise 2 — Harmonic Sum
+Write a program that computes the following sum:
+
+sum = 1.0/1 + 1.0/2 + 1.0/3 + 1.0/4 + 1.0/5 + .... + 1.0/N
+N is an integer limit that the user enters.
+
+Enter N
+4
+
+Sum is: 2.08333333333
+Use an integer variable for the loop counter (of course!) but do the math using double precision.
+
+Click here to go back to the main menu.
+
+Exercise 3 — Average and Standard Deviation of N Numbers
+Write a program that computes the average and the standard deviation of a set of N floating point numbers
+
+First, the program asks for N, the number of values to follow. Then the program asks for and reads in each floating point number. Finally it writes out the average and standard deviation.
+
+The average (arithmetic mean) is the sum of the N numbers divided by N. The standard deviation of a set of numbers Xi is:
+
+SD = Math.sqrt( avgSquare - avg2 )
+Here, avg is the average of the N numbers, and avg2 is its square.
+
+avgSquare is the average of (Xi * Xi). This is the average of the squared value of each floating point number.
+
+Notice that the average square is not the same value as the square of the average.
+
+For example, for N = 4, say the numbers are:
+
+ 	Xi	Xi * Xi
+ 	2.0	4.0
+ 	3.0	9.0
+ 	1.0	1.0
+ 	2.0	4.0
+ 	
+sum	8.0	18.0
+Now:
+
+avg = 8.0/4 = 2.0
+avg2 = 4.0
+
+avgSquare = 18.0/4 = 4.5
+
+SD = Math.sqrt( 4.5 - 4.0 ) = Math.sqrt( .5 ) = 0.7071067812
+To do this you will need to do several things inside the loop body for each floating point value as it comes in: add it to a sum, square it and add it to a sum of squares. Then after the loop is finished apply the formula.
+
+Here is some weight of 10 M&M candies in grams:
+
+0.87	0.89
+0.88	0.92
+0.87	0.85
+0.91	0.87
+0.93	0.79
+What is the average weight and standard deviation?

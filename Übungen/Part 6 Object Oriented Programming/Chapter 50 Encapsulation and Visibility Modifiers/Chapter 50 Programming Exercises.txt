@@ -1,0 +1,107 @@
+Chapter 50 Programming Exercises
+Exercise 1 — Immutable Box
+Implement a class, Box, similar to the class in a previous review exercise. But the new implementation of Box will have better encapsulation. Here is the documentation for Box:
+
+class Box
+
+A class that implements a cardboard box.
+
+Constructors
+
+Box ( double width, double height, double length )
+
+Box ( double side )
+
+Methods
+
+double volume()
+
+double area()
+
+Look at the previous programming exercise for more discussion and for code which easily can be modified for this and the next two exercises.
+
+In the current implementation of Box make all the instance variables private. This means that only methods of a Box object can see that object's data. The object will be immutable if there are no access methods that make changes to this data. An immutable object is one whose data does not change. You may remember that String objects are immutable---once the characters of the String are set with a constructor they never change (although they can be used to create other String objects.) There are many advantages to using immutable objects, especially when programming with threads (which is how nearly all big programs are written.)
+
+Give public access to the methods of Box.
+
+Test your Box class with several versions of this program:
+
+class BoxTester
+{
+
+  public static void main ( String[] args )
+  {
+     Box box = new  Box( 2.5, 5.0, 6.0 ) ;
+
+     System.out.println( "Area: "  + box.area() + " volume: " + box. volume() );
+
+     System.out.println( "length: " + box.length + " height: " + box. height +
+                         "width:  " + box.width )  ;
+
+  }
+}
+(The above program will not compile, which is what you want. Reflect on why it does not compile and fix it so that it does.)
+
+Click here to go back to the main menu.
+
+Exercise 2 — Private Methods for Box
+The implementation of area() given in the previous review exercise is probably reasonable for the Box class. But to practice private methods write it like this:
+
+double area()
+{
+  return 2 * faceArea() + 2 * topArea() + 2 * sideArea() ;              
+}
+In this, faceArea(), topArea() , and sideArea() are private methods that calculate the area of the front face, the top and the side of the box. You will have to add them to your class. Often private methods are "helping" methods that the public methods use, but are not to be used outside the class. Test your program with several versions of the following:
+
+class BoxTester
+{
+
+  public static void main ( String[] args )
+  {
+     Box box = new  Box( 2.5, 5.0, 6.0 ) ;
+
+     System.out.println( "Area: "  + box.area() + " volume: " + box. volume() );
+     System.out.println( "topArea: "  + box.topArea() );
+
+  }
+}
+(The above program will not compile, as expected.)
+
+Click here to go back to the main menu.
+
+Exercise 3 — Box Constructor and Access Methods
+Add a new constructor to the Box class:
+
+Box( Box oldBox )
+This constructor creates a new Box object with identical dimensions as the old Box object. Of course, the old object is not changed.
+
+Now add some access methods. An access method is a method that can be used to access the private variables (and other variables) of an object:
+
+public double length()
+public double height()
+public double width()
+Each of these methods merely returns the value of one instance variable. Since the object is immutable, there will be no access methods that alter the instance variables. Test you program with modifications of the previous testing class.
+
+
+Click here to go back to the main menu.
+
+Exercise 4 — Bigger Boxes
+It would be nice to create a box that is bigger than a given box. Write this method:
+
+public Box biggerBox( Box oldBox )
+This is a public method that returns (evaluates to) a reference to a new Box. The new Box will be 25% larger in each dimension that the old box. The method will have to use a constructor inside of it to create the new box:
+
+public Box biggerBox( Box oldBox )
+{
+
+  return new Box( 1.25*oldBox.width(), ...... )
+}
+Now write a method that returns a box that is 25% smaller in every dimension than a given box. As usual, write a testing program that exercises your class.
+
+Click here to go back to the main menu.
+
+Exercise 5 — Nesting Boxes
+Write a method that evaluates to true or false depending on whether a box completely fits inside another:
+
+public boolean nests( Box outsideBox )
+This is potentially a difficult method, since the box may fit or not fit depending on how it is rotated. To simplify the method, write it so that it returns true if the two boxes nest without considering rotations (so height is compared to height, length compared to length, and so on.)

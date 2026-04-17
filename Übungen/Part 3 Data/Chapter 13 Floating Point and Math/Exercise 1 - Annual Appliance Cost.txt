@@ -1,0 +1,8 @@
+Exercise 1 — Annual Appliance Cost
+Write a program that calculates the annual cost of running an appliance. The program asks the user for the cost per kilowatt-hour and the number of kilowatt-hours the appliance uses in a year:
+
+Enter cost per kilowatt-hour  in cents
+8.42
+Enter kilowatt-hours used per year
+653
+Annual cost: 54.9826

@@ -1,0 +1,95 @@
+Programming Exercises
+Exercise 1 — Junk Mail Generator
+Write a program that creates a "personalized" letter, given a form letter and a person's name. The form letter is an input file of text (use file redirection). The person's name is a command line argument. The file is normal text, but with a * wherever a person's name should be substituted. For example:
+
+Dear *,
+
+I have exciting news for you, *!!! For just $49.99 plus postage
+and handling you, *, can be the proud owner of a genuine leather
+mouse pad!  No more finger strain for you, *, as you surf the web
+with style.
+
+Act Soon,
+
+Venture Marketing Corp.
+Assume the above is in a file junk.txt. A run of the program outputs:
+
+C:\programs>java  JunkGenerator "Occupant" < junk.txt
+Dear Occupant,
+
+I have exciting news for you, Occupant!!! For just $49.99 plus postage
+and handling you, Occupant, can be the proud owner of a genuine leather
+mouse pad!  No more finger strain for you, Occupant, as you surf the web
+with style.
+
+Act Soon,
+
+Venture Marketing Corp.
+
+C:\programs>
+Write the program so that it will substitute for any number of * on one line, and accepts any number of lines as input. The main program loop will be a while loop that continues until the input string (read with readLine()) is null.
+
+If you wish to avoid the command line argument, ask the user for the occupant name and input it in the usual way.
+
+Click here to go back to the main menu.
+
+Exercise 2 — Word Reverser
+Write a program that reads in a sentence from the user and prints it out with each word reversed, but with the words and punctuation in the original order:
+
+C:\> java reverseSent 
+Input:  Go to the main menu.
+oG ot eht niam unem.
+Click here to go back to the main menu.
+
+Exercise 3 — ISBN Verifier
+An International Standard Book Number (ISBN) is a code that uniquely identifies an edition of a book. The ISBN consists of ten digits separated by dashes into groups. The groups are of various sizes, except for the last group. The last group is always a single character, '0' through '9' or 'X', and acts as a check on the rest of the digits.
+
+0-670-03441-X
+0-201-48558-3
+1-56592-262-X
+0-06-027900-1
+0-439-45695-9
+0-470-84371-3
+1-4000-3136-2
+0-19-856453-8
+1-85671-104-8
+The last character is calculated from the other 9 digits:
+
+Multiply the first digit by 10.
+Multiply the second digit by 9.
+Multiply the second digit by 8.
+. . .
+Multiply the ninth digit by 2.
+Add up all these values.
+Integer divide the sum by 11.
+Find the remainder.
+Subtract the remainder from 11. This is the check digit.
+If the remainder is 10, use an 'X'
+For example:
+
+0-201-48558-3
+
+0 * 10 =  0
+2 *  9 = 18
+0 *  8 =  0
+1 *  7 =  7
+4 *  6 = 24
+8 *  5 = 40
+5 *  4 = 20
+5 *  3 = 15
+8 *  2 = 16
+        -----
+sum =   140
+
+140 / 11 = 12 rem 8
+
+11 - 8 = 3 <-- the check digit
+Write a program that prompts the user for an ISBN and then checks if the ISBN is correct. Calculate a check character from the first nine digits and compare it to the last character of the ISBN. If the two do not agree, the ISBN is incorrect.
+
+Click here to go back to the main menu.
+
+Exercise 4 — String vs StringBuffer
+Modify the program ReverseTester of the program so that it includes a method that creates a random string 1000 characters long. In the main method, reverse that string 1000 times. Merely call reverse and then discard the string, done print it out. (For debugging purposes, start out with 100 reversals of a short string, or something else manageable.)
+
+Time how long this takes. Now change the program so it does the same thing but with the version of reverse that uses Strings only. Time how long that version of the program takes.
+

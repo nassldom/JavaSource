@@ -1,0 +1,181 @@
+Chapter 53 Programming Exercises
+These exercises assume that your have read the review exercise for this chapter. All of the programming exercises are modifications of that program. Start by copying that program into Notepad.
+Exercise 1 — User Interaction.
+Modify the PantryTester class so that it carries out a dialog with the user:
+
+Welcome to Mother Hubbard's Pantry!
+
+The jams are:
+1: Gooseberry   7/4/86   12 fl. oz.
+2: Crab Apple   9/30/99   8 fl. oz.
+3: Rhubarb   10/31/99   16 fl. oz.
+Enter your selection (1, 2, or 3):
+1
+Enter amount to spread:
+2
+Spreading 2 fluid ounces of Gooseberry
+
+The jams are:
+1: Gooseberry   7/4/86   10 fl. oz.
+2: Crab Apple   9/30/99   8 fl. oz.
+3: Rhubarb   10/31/99   16 fl. oz.
+Enter your selection (1, 2, or 3):
+2
+Enter amount to spread:
+25
+Spreading 8 fluid ounces of Crab Apple
+
+The jams are:
+1: Gooseberry   7/4/86   10 fl. oz.
+2: Crab Apple   9/30/99   0 fl. oz.
+3: Rhubarb   10/31/99   16 fl. oz.
+Enter your selection (1, 2, or 3):
+2
+Enter amount to spread:
+9
+No jam in the Jar!
+
+The jams are:
+1: Gooseberry   7/4/86   10 fl. oz.
+2: Crab Apple   9/30/99   0 fl. oz.
+3: Rhubarb   10/31/99   16 fl. oz.
+Enter your selection (1, 2, or 3):
+-1
+Good-by
+The program should first initialize the jams and the pantry, then....
+
+List the available jams.
+Prompt the user.
+Input the users selection.
+Write an error message for an out-of-range selection (and then start over).
+Prompt the user for an amount.
+Decrease the amount of the selected jam by the proper amount.
+Exit when the user selects jam -1, otherwise start over.
+Use the Jam and Pantry classes from the Review exercise. To do this:
+
+Copy the code at the end of the exercise to an editor, save it, and compile it.
+You will now have Jam.class, Pantry.class and PantryTester.class in your directory.
+Create a new file, Exercise1.java that implements the user interaction.
+Compile and run Exercise1.java.
+Of course, if you are using an IDE like BlueJ you will do what it requires.
+
+Exercise1.java starts out like this:
+
+ 
+import java.util.*;
+
+public class Exercise1
+{
+  public static void main ( String[] args ) 
+  {
+    Scan scan = new Scanner( System.in );
+    String inChars;
+
+    Jam goose = new Jam( "Gooseberry", "7/4/86", 12 );
+    Jam apple = new Jam( "Crab Apple", "9/30/99", 8 );
+    Jam rhub  = new Jam( "Rhubarb", "10/31/99", 16 );
+
+    . . . . . . . . . .
+
+  }
+}
+Click here to go back to the main menu.
+
+Exercise 2 — New Constructors for the Pantry Class
+Add new constructors to the Pantry Class: a constructor that takes one Jam parameter, and another that takes two Jam parameters. Unused instance variables in the Pantry object will be set to null.
+
+Now modify the methods of the class to deal with null instance variables: toString() will test for null before appending a String for a Jam. select() will have a return type of boolean. Return true if the selection is available, otherwise false.
+
+Here is a PantryTester2 class that demonstrates the new code:
+
+ 
+public class PantryTester2
+{
+  public static void main ( String[] args )
+  {
+    Jam goose = new Jam( "Gooseberry", "7/4/86", 12 );
+    Jam apple = new Jam( "Crab Apple", "9/30/99", 8 );
+
+    Pantry hubbard = new Pantry( goose, apple );
+    hubbard.print();
+
+    if ( hubbard.select(1) )
+      hubbard.spread(2);
+    else
+      System.out.println("Selection not available");
+    System.out.println( hubbard );
+
+    if ( hubbard.select(3) )
+      hubbard.spread(5);
+    else
+      System.out.println("Selection not available");
+    System.out.println( hubbard );
+
+  }
+}
+When it is run, it prints the following:
+
+ 
+1: Gooseberry   7/4/86   12 fl. oz.
+2: Crab Apple   9/30/99   8 fl. oz.
+Spreading 2 fluid ounces of Gooseberry
+
+1: Gooseberry   7/4/86   10 fl. oz.
+2: Crab Apple   9/30/99   8 fl. oz.
+Selection not available
+
+1: Gooseberry   7/4/86   10 fl. oz.
+2: Crab Apple   9/30/99   8 fl. oz.
+Of course, complete testing would involve a much larger PantryTester2.
+
+Click here to go back to the main menu.
+Exercise 3 — replace() method
+Add more code to the program of exercise 2. Write a method replace( Jam j, int slot ) for the Pantry class that replaces a particular jar of jam in the pantry with the object j. Here is a testing program:
+
+ 
+public class PantryTester3
+{
+  public static void main ( String[] args )
+  {
+    Jam goose = new Jam( "Gooseberry", "7/4/86", 12 );
+    Jam apple = new Jam( "Crab Apple", "9/30/99", 8 );
+    Jam rhub  = new Jam( "Rhubarb", "10/31/99", 16 );
+
+    Pantry hubbard = new Pantry( goose, apple );
+    System.out.println( hubbard );
+
+    if ( hubbard.select(3) )
+      hubbard.spread(2);
+    else
+      System.out.println("Selection not available");
+    System.out.println( hubbard );
+
+    hubbard.replace( rhub, 3 );
+    System.out.println( hubbard );
+
+    if ( hubbard.select(3) )
+      hubbard.spread(2);
+    else
+      System.out.println("Selection not available");
+    System.out.println( hubbard );
+    
+  }
+}
+Click here to go back to the main menu.
+Exercise 4 — MixedFruit
+Add a method to the Pantry class:
+
+public void mixedFruit()
+This method checks that each jar of jam in the pantry has 2 fluid ounces or less, and if so, replaces the first jar of jam with a new jar of mixed fruit jam. The amount is the combined amount of the original three jars. The last two jars are set to null. (In other words, this method mixes the jam in all three jars to create a new jar that replaces the old jars.) Modify the testing program to use this new method. Here is sample output of a testing program:
+
+ 
+1: Gooseberry   7/4/86   4 fl. oz.
+2: Crab Apple   9/30/99   1 fl. oz.
+3: Rhubarb   10/31/99   2 fl. oz.
+Spreading 2 fluid ounces of Gooseberry
+
+1: Gooseberry   7/4/86   2 fl. oz.
+2: Crab Apple   9/30/99   1 fl. oz.
+3: Rhubarb   10/31/99   2 fl. oz.
+
+1: Mixed Fruit   7/4/86   5 fl. oz.

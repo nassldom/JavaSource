@@ -1,0 +1,94 @@
+Chapter 94 Programming Exercises
+Exercise 1
+Write a method (similar to Xlength()) that counts the number of times a particular character occurs in a string. The string and the particular character are both parameters of the method. For example,
+
+countChar( "XaaaYaaaZaaaYaaaaY", 'Y' )
+returns 3.
+
+Click here to go back to the main menu.
+
+Exercise 2
+Write a method that creates a string that is similar to the argument string but with all the vowels removed. Regard a, e, i, o, u (upper and lower case) as vowels. For example,
+
+removeVowels( "counterrevolutionaries" )
+returns "cntrrvltnrs" .
+
+removeVowels( "AUDIOBOOK" )
+returns "DBK" .
+
+Click here to go back to the main menu.
+
+Exercise 3
+Write a program that implements string matching, except now the character '?' in either string matches any single character at the same position in the other string. If both strings have '?' in the same position, the characters match each other. For example,
+
+MOON matches M??N
+
+W?zar? matches ?izard
+
+??? matches ???
+
+??????snake matches rattle?????
+Click here to go back to the main menu.
+
+Exercise 4
+Modify the recursive definition of equals so that two strings are equalX if both strings have the same number of X characters and those characters are in all the same positions in both strings. The strings may be different lengths, but the longer string can have no Xs in its extra length. For example,
+
+equalX( "X", "X" ) is true
+
+equalX( "aaaXaaaX", "abcXcbaX" ) is true
+
+equalX( "XaXbXcX", "XtXoXpXdef" ) is true
+
+equalX( "XaXbXcX", "XtXoXpXdXf" ) is false
+
+equalX( "XXXX", "XX" ) is false
+
+equalX( "aXaXbXcX", "XtXoXpX" ) is false
+If StringA has no characters and StringB has no characters, then the strings ARE equalX.
+If StringA has no characters and StringB has some characters, then
+the strings are equalX if StringB has no Xs.
+the strings are NOT equalX if StringB has any X.
+If StringB has no characters and StringA has some characters, then
+the strings are equalX if StringA has no Xs.
+the strings are NOT equalX if StringA has any X.
+If both strings have some characters, then
+if the first character of both strings is X, then the strings are equalX if the tails are equalX.
+if the first character of one string is X, but the first character of the other string is not X, then the strings are NOT equalX
+if the first characters of both strings are not X, then the strings are equalX if the tails are equalX.
+Click here to go back to the main menu.
+
+Exercise 5
+Change the recursive definition of equals so that vowels are ignored. Now "kangaroo" equals "kongeroo", both of them equals "kaangaro", and also equal "kngr".
+
+The easy way to program this would be to first strip out all vowels and then compare what is left. But for this exercise, try to write a recursive definition that does the comparison on the unaltered strings. This may be somewhat difficult. Translate your definition into Java and test it.
+
+Click here to go back to the main menu.
+
+Exercise 6
+A palindrome is a string that is the same when reversed. For example, "abba" is a palindrome. Here is a math-like definition:
+
+palindrome( "" ) = true
+
+palindrome( x  ) = true
+
+palindrome( x+X+y ) = false, if x != y
+                    = palindrome( X ), if x == y
+The symbol x stands for a single character, as does y. The symbol X stands for a string of characters. The symbol + stands for concatenation.
+
+Implement palindrome() and a program that tests it.
+
+Click here to go back to the main menu.
+
+Exercise 7
+The previous program for palindrome required that each character of the string have a matching character in the same position but starting from the other end. But most popular palindromes involve punctuation, spaces, and capitalization that is ignored. So, for instance, the following are all palindromes under this extended definition:
+
+Ah! Satan sees Natasha.
+
+Eva, can I see bees in a cave?
+
+Was it a car or a cat I saw?
+Write a math-like definition for this extended idea of palindrome, and write a program that implements and tests it. You will need to add two more recursive cases to the definition of palindrome.
+
+You will find the methods isLetterOrDigit() and toLowerCase() from the class Character very useful.
+
+(This program might prove to be difficult.)

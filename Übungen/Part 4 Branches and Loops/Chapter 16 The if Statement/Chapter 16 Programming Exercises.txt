@@ -1,0 +1,139 @@
+Exercise 1 — Discount Prices
+During a sale at a store, a 10% discount is applied to purchases over $10.00. Write a program that asks for the amount of a purchase, then calculates the discounted price. The purchase amount will be input in cents (as an integer):
+
+Enter amount of purchases:
+2000
+Discounted price: 1800
+Use integer arithmetic throughout the program.
+
+Click here to go back to the main menu.
+
+Exercise 2 — Order Checker
+Bob's Discount Bolts charges the following prices:
+
+5 cents per bolt
+3 cents per nut
+1 cent per washer
+Write a program that asks the user for the number of bolts, nuts, and washers in their purchase and then calculates and prints out the total. As an added feature, the program checks the order. A correct order must have at least as many nuts as bolts and at least twice as many washers as blots, otherwise the order has an error.
+
+For an error the program writes out "Check the Order: too few nuts" or "Check the Order: too few washers" as appropriate. Both error messages are written if the order has both errors. If there are no errors the program writes out "Order is OK." In all cases the total price in cents (of the specified number of items) is written out.
+
+Number of bolts: 12
+Number of nuts: 8
+Number of washers: 24
+
+Check the Order: too few nuts
+
+Total cost: 108
+Use constants for the unit cost of each item. In other words, declare constants such as final int boltPrice = 5;.
+
+Click here to go back to the main menu.
+
+Exercise 3 — Last Chance Gas
+Al's Last Chance Gas station sits on Route 190 on the edge of Death Valley. There is no other gas station for 200 miles. Write a program to help drivers decide if they need gas. The program asks for:
+
+The capacity of the gas tank, in gallons.
+The indication of the gas gauge in percent (full= 100, three quarters full = 75, and so on).
+The miles per gallon of the car.
+The program then writes out "Get Gas" or "Safe to Proceed" depending on if the car can cross the 200 miles with the gas remaining in the tank.
+
+Tank capacity:
+12
+Gage reading:
+50
+Miles per gallon:
+30
+Get Gas!
+Use integers for all input and all arithmetic.     
+
+Click here to go back to the main menu.
+
+Exercise 4 — Pie Eating Contest
+At the State Fair Pie Eating Contest all contestants in the heavyweight division must weigh within 30 pounds of 250 pounds. Write a program that asks for a contestant's weight and then says if the contestant is allowed in the contest.
+
+Click here to go back to the main menu.
+
+Exercise 5 — Ground Beef Value Calculator
+Different packages of ground beef have different percentages of fat and different costs per pound. Write a program that asks the user for:
+
+The price per pound of package "A"
+The percent lean in package "A"
+The price per pound of package "B"
+The percent lean in package "B"
+The program then calculates the cost per pound of lean (non-fat) beef for each package and writes out which is the best value.
+
+Price per pound package A:
+2.89
+Percent lean package A:
+85
+Price per pound package B:
+3.49
+Percent lean package B:
+93
+
+Package A cost per pound of lean:3.4
+Package B cost per pound of lean:3.752688
+Package A is the best value
+Assume that the two packages will not come out equal in value.
+
+Click here to go back to the main menu.
+
+Exercise 5 — Y2K Problem Detector
+Write a program that asks a user for their birth year encoded as two digits (like "62") and for the current year, also encoded as two digits (like "99"). The program is to correctly write out the users age in years.
+
+Year of Birth: 62
+Current year: 99
+Your age: 37
+The program will have to determine when a two digit value such as "62" corresponds to a year in the 20th century ("1962") or the 21st century. Here is another run of the program, where "00" is taken to mean the year 2000:
+
+Year of Birth: 62
+Current year: 00
+Your age: 38
+Assume that ages are not negative. Another run of the program:
+
+Year of Birth: 27
+Current year: 07
+Your age: 80
+In the following run, the age of the person could be 6 or 106 depending on the assumptions. Assume that the age will always be less than or equal to 100.
+
+Year of Birth: 01
+Current year: 07
+Your age: 6
+Click here to go back to the main menu.
+
+Exercise 6 — Wind Chill Index
+Write a program that calculates the wind chill index given the temperature and the wind speed.
+
+C:\JavaCode> java WindChill
+Enter Wind Speed:
+15
+Enter Temperature:
+20
+Wind Chill: 6.218885266083872
+The wind chill index (WCI) is calculated from the wind speed v in miles per hour and the temperature temp in Fahrenheit. Three formulas are used, depending on the wind speed:
+
+If wind speed is less than 3 mph then wind chill = current temperature
+
+If the current temperature is greater than 50° F then wind chill = current temperature
+
+otherwise, wind chill = 35.74 + 0.6215*temp - 35.75*v0.16 + 0.4275*temp*v0.16
+You will need to import java.lang.Math and use floating point input for this exercise. To calculate v0.16 use Math.pow().
+
+Click here to go back to the main menu.
+
+Exercise 7 —Your Age in Seconds
+Write a program that asks for your age in years, months, and days and writes out your age in seconds. Do this by calculating the number of total days you have been alive, then multiply this by the number of hours per day (24), the number of minutes per hour (60), and the number of seconds per minute (60). Assume that there are 365 days per year (ignore leap years). But correctly take account of the different number of days in different months. If the user enters 5 for the number of months, add up the number of days in the first 5 months: 31 + 28 + 31 + 30 + 31
+
+A human lifespan is about 2.5 billion seconds (2.5 billion heart-beats). Write out what percentage of your expected lifespan you have lived.
+
+Click here to go back to the main menu.
+
+Exercise 8 —Matinee Movie Tickets
+Write a program that determines the price of a movie ticket (similar to the one in the chapter). The program asks for the customer's age and for the time on a 24-hour clock (where noon is 1200 and 4:30 pm is 1630). The normal adult ticket price is $8.00, however the adult matinee price is $5.00. Adults are those over 13 years. The normal children's ticket price is $4.00, however the children's matinee price is $2.00. Assume that a matinee starts at any time earlier than 5 pm (1700).
+
+Get the information from the user and then use nested if statements to determine the ticket price. It is usually a good idea to separate the "information gathering phase" (asking the user for age and time) from the "processing phase" of a program (deciding on the ticket price). There are many ways in which the if statements can be nested. Sketch out a flowchart as you design your program.
+
+Click here to go back to the main menu.
+
+Exercise 9 —Midnight Madness
+Sales of movie tickets has been dropping! In an effort to attract more viewers, the theater has started a new policy charging $4.00 for all tickets sold after 2200 (10 pm). However, no children may purchase tickets after that time. Add logic to the program of exercise 8 to implement the new policy.

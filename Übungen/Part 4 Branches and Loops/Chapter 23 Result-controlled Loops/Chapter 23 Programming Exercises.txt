@@ -1,0 +1,178 @@
+Chapter 23 Programming Exercises
+Exercise 1 — Modified Million Dollars
+Modify the DollarsAfterForty program in the chapter so that it asks the user for the interest rate, the initial investment, and the annual contribution. The program prints out the current value of the investment at the end of each year and continues until it reaches or exceeds one million dollars.
+
+Click here to go back to the main menu.
+
+Exercise 2 — Credit Card Bill
+Say that you owe the credit card company $1000.00. The company charges you 1.5% per month on the unpaid balance. You have decided to stop using the card and to pay off the debt by making a monthly payment of N dollars a month. Write a program that asks for the monthly payment, then writes out the balance and total payments so far for every succeeding month until the balance is zero or less.
+
+Enter the monthly payment:
+100
+Month: 1        balance: 915.0  total payments: 100.0
+Month: 2        balance: 828.725        total payments: 200.0
+Month: 3        balance: 741.155875     total payments: 300.0
+Month: 4        balance: 652.273213125  total payments: 400.0
+Month: 5        balance: 562.057311321875       total payments: 500.0
+Month: 6        balance: 470.4881709917031      total payments: 600.0
+Month: 7        balance: 377.54549355657866     total payments: 700.0
+Month: 8        balance: 283.20867595992735     total payments: 800.0
+Month: 9        balance: 187.4568060993263      total payments: 900.0
+Month: 10       balance: 90.26865819081618      total payments: 1000.0
+Month: 11       balance: -8.377311936321576     total payments: 1100.0
+For each month, calculate the interest due on the unpaid balance. Then calculate the new balance by adding the interest and subtracting the payment.
+
+Improved Program:     Have the program prompt for the beginning balance, the monthly interest, and the payment amount. Also, when the balance falls below the amount of the monthly payment, write out the final payment that will bring the balance to exactly zero.
+
+Further Improved Program:     The output of the program is somewhat ugly, with the columns not aligned and too many digits printed in the decimal fractions. This can be improved. Place the following lines in the appropriate places in your program. You will need to modify the last line to fit with the rest of your program.
+
+import java.text.*;
+DecimalFormat numform = new DecimalFormat(); 
+System.out.print( "balance: " + numform.format(balance) );
+For details about how this works, see Chapter 24.
+
+Click here to go back to the main menu.
+
+Exercise 3 — Drug Potency
+A certain drug looses 4% of its effectiveness every month it is in storage. When its effectiveness is below 50% it is considered expired and must be discarded. Write a program that determines how many months the drug can remain in storage.
+
+month: 0        effectiveness: 100.0
+month: 1        effectiveness: 96.0
+month: 2        effectiveness: 92.16
+month: 3        effectiveness: 88.47359999999999
+month: 4        effectiveness: 84.93465599999999
+month: 5        effectiveness: 81.53726975999999
+month: 6        effectiveness: 78.27577896959998
+month: 7        effectiveness: 75.14474781081599
+month: 8        effectiveness: 72.13895789838334
+month: 9        effectiveness: 69.253399582448
+month: 10       effectiveness: 66.48326359915008
+month: 11       effectiveness: 63.82393305518407
+month: 12       effectiveness: 61.27097573297671
+month: 13       effectiveness: 58.82013670365764
+month: 14       effectiveness: 56.46733123551133
+month: 15       effectiveness: 54.20863798609088
+month: 16       effectiveness: 52.04029246664724
+month: 17       effectiveness: 49.95868076798135 DISCARDED
+Click here to go back to the main menu.
+
+Exercise 4 — ex
+One of the more amazing facts from calculus is that the following sum gets closer and closer to the value ex the more terms you add in:
+
+e x  = 1 + x + x 2 /2! +  x 3 /3! +  x 4 /4! + x 5 /5! +  x 6 /6! + . . . .
+Remember that n! means n factorial, n*(n-1)*(n-2)* ... *1. For example, if x is 2 then
+
+e2 = 1 + 2 + 22/2! + 23/3! + 24/4! + 25/5!  . . . .
+e2 = 1 + 2 + 4/2 + 8/6 + 16/24 + 32/120 + . . . .
+
+
+e2 = 1 + 2 +  2  + 1.3333 + 0.6666 + 0.2666 + . . . .
+
+
+e2 ~ 7.266
+
+
+More exactly, e2 = 7.38907...
+
+Write a program that asks the user to enter x, then calculates ex using a loop to add up successive terms until the current term is less than 1.0E-12. Then write out the value Math.exp(x) to see how your value compares.
+
+To do this program sensibly, the loop will add in a term each iteration.
+
+sum = sum + term;
+Look carefully at the first equation for ex. Notice that each term in the series is:
+
+x N/N! 
+for some N. This is the same as:
+
+ x(N-1)/(N-1)! *  x/N
+This is the previous term times x/N. So each iteration of the loop merely has to multiply the previous term by x/N and add it to the accumulating sum.
+
+Don't let the math scare you away! This is actually a fairly easy program, and is typical of a type of calculation that computers are often used for.
+
+Enter x:
+2
+n:1     term: 2.0               sum: 3.0
+n:2     term: 2.0               sum: 5.0
+n:3     term: 1.3333333333333333                sum: 6.333333333333333
+n:4     term: 0.6666666666666666                sum: 7.0
+n:5     term: 0.26666666666666666               sum: 7.266666666666667
+n:6     term: 0.08888888888888889               sum: 7.355555555555555
+n:7     term: 0.025396825396825397              sum: 7.3809523809523805
+n:8     term: 0.006349206349206349              sum: 7.387301587301587
+n:9     term: 0.0014109347442680777             sum: 7.3887125220458545
+n:10    term: 2.8218694885361555E-4             sum: 7.388994708994708
+n:11    term: 5.130671797338464E-5              sum: 7.389046015712681
+n:12    term: 8.551119662230774E-6              sum: 7.3890545668323435
+n:13    term: 1.3155568711124268E-6             sum: 7.389055882389215
+n:14    term: 1.8793669587320383E-7             sum: 7.3890560703259105
+n:15    term: 2.5058226116427178E-8             sum: 7.389056095384136
+n:16    term: 3.1322782645533972E-9             sum: 7.389056098516415
+n:17    term: 3.6850332524157613E-10            sum: 7.389056098884918
+n:18    term: 4.094481391573068E-11             sum: 7.389056098925863
+n:19    term: 4.309980412182177E-12             sum: 7.3890560989301735
+n:20    term: 4.309980412182177E-13             sum: 7.389056098930604
+
+my   e^x: 7.389056098930604
+real e^x: 7.38905609893065
+Click here to go back to the main menu.
+
+Exercise 4 — 1/B by Newton's Method
+Another amazing fact from calculus is that you can calculate 1/B without doing division. (Assume that B is a positive real number.)
+
+Say that x is your first guess for the value 1/B. Then your guess can be improved by using the formula:
+
+x' = x*(2-B*x)
+Of course, now that guess can be further improved by using the same formula. This formula is yet another application of Newton's Method.
+
+For example, say that B is 4.0. You want to calculate 1/4. Say that your first guess for this value is 0.1 ; then an improved guess is:
+
+x' = 0.1 * (2 - 4*0.1) = 0.1 * (2 - .4) = 0.1*(1.6) = 0.16
+The next estimate is:
+
+x' = 0.16 * (2 - 4*0.16) = 0.16 * (2 - 0.64) = 0.16 * 1.36 = 0.2176
+A further improvement is:
+
+x' = 0.2176 * (2 - 4*0.2176) = 0.2176 * (2 - 0.8704) = 0.2176 * 1.1296 = 0.24580096
+Repeat the formula to further improve the guess.
+
+Write a program that asks the user for B and then writes out 1/B without using a division. You will need to think of an appropriate ending condition for the loop that calculates 1/B.
+
+Unfortunately, the first guess for this method must be between zero and the true value of 1/B. It sounds like you need division to make the first guess, but this can be avoided by always starting with a hard-coded (a constant that is part of the program) very tiny first guess.
+
+For very large values of B your first guess might not be tiny enough, because 1/B is so small. Protect your code with an if statement that checks if B is too large for the program to handle. If the first guess is hard-coded, then you know the maximum value for B.
+
+Of course, 1/0 is not defined, so test for this, too.
+
+Click here to go back to the main menu.
+
+Exercise 5 — Hailstone Numbers
+Write a program that asks the user for a positive integer N and then calculates a new value for N based on whether it is even or odd:
+
+if N is even, the new N is N/2. (Use integer division.)
+
+if N is odd, the new N is 3*N + 1.
+Repeat with each new N until you reach the value 1.
+
+For example, say the initial value is 12. Then the successive values are:
+
+12  (even, next value is 12/2)
+6   (even, next value is 6/2)
+3   (odd,  next value is 3*3+1)
+10  (even, next value is 10/2)
+5   (odd,  next value is 3*5+1)
+16  (even, next value is 16/2)
+8   (even, next value is 8/2)
+4   (even, next value is 4/2)
+2   (even, next value is 2/2)
+1   (stop calculation)
+The sequence of integers is called a hailstone series because the integers increase and decrease, sometimes many times, before eventually reaching 1. (This is supposed to be like hailstones blowing up and down in a storm before reaching the ground.)
+
+For all integers that have been tested (up to 1048) the series eventually does reach 1. But no one knows for sure if this is true for all integers.
+
+Additional Things to Calculate: In addition to calculating and printing out the sequence for a particular initial N, keep track of the length of the sequence and the maximum integer in the sequence and print them out when the sequence reaches its end.
+
+A variation on this program is to generate each sequence for initial numbers from 1 to 1000, and to determine the length and starting number of the longest of those sequences. You probably don't want to print out each sequence, just keep track of each length and compare it to the current maximum.
+
+Hard: Are there any integers from 1 to 1000 that are not in any hailstone sequence other than the one they start? To write a sensible program that determines this, you will need to use an array, which is the subject of chapter 46. You may wish to return to this problem after you have covered that chapter.
+
+Note: it is natural to investigate sequences that start with initial numbers in the millions or higher. The terms of these sequences get very large; larger than can be held in an int variable. Use data type long to avoid these problems. That will work for initial values up to at least five billion.

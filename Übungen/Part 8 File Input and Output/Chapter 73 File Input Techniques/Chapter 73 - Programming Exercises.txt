@@ -1,0 +1,169 @@
+Programming Exercises
+1.   Medium: Write a program that computes the average of groups of integer data. This is similar to the programs in the chapter. But instead of all input coming from one file, this new program uses several separate files. The program asks the user for the name of the first file, computes and prints its average, and then asks the user for the name of the next file, computes and prints its average, and so on.
+
+Do all this with a while loop. Be sure to close each file at the bottom of the loop before asking for the next file. When the user enters the file name "quit" the program prints out the average of all the integers in all the files and quits.
+
+Each data file contains the list of integers to be averaged and nothing else. (No header at the top and no sentinel.) The program can deal with any number of files, including one and zero.
+
+Click here to go back to the main menu.
+
+2.   Hard: Write a program that reads a text file that contains groups of integers that start with the word "next". For each group, the program computes and writes out the sum of integers in that group. There may be any number of groups. Example data set:
+
+next
+12 45
+92 -12 31
+next
+42 51 275 82 -274 
+-1 0 26 365 
+-56
+72
+next
+90 93 91 95
+97 96 98
+For this data the program writes:
+
+Sum of group 1 is 168
+Sum of group 2 is 582
+Sum of group 3 is 660
+Here is another set of data:
+
+next
+1 1 1 1 1 1
+next
+next
+1 1 1 1 1 1 1 1 1
+next
+10 11
+12 13
+7   8
+9
+For this data the program writes:
+
+Sum of group 1 is 6
+Group 2 contains no data
+Sum of group 3 is 9
+Sum of group 4 is 70
+The logic of this program is quite tricky.
+
+3. Long: Write a program that computes the average change of a value for each of several groups of data. Input is from a file of data.
+
+Size: about 80 lines, including blank lines and comments
+
+Time to Complete: part of an afternoon
+
+Problem: Say that your are conducting an experiment to determine the effect of a high fiber diet on cholesterol levels in humans. You have several groups of human subjects. At the beginning of the experiment the cholesterol level of each subject in each group is measured.
+
+Now the experiment runs for one month. Each group consumes a different amount of fiber each day. At the end of the month you want to see the change in each group's cholesterol level.
+
+The data for the experiment is in a text file like the following. Each line of the file contains a single integer (in character form).
+
+number of groups
+number of subjects in group 1
+group1 subject1 starting cholesterol
+group1 subject1 ending cholesterol
+group1 subject2 starting cholesterol
+group1 subject2 ending cholesterol
+ . . . . . 
+group1 last subject starting cholesterol
+group1 last subject ending cholesterol
+number of subjects in group 2
+group2 subject1 starting cholesterol
+group2 subject1 ending cholesterol
+ . . . . . 
+group2 last subject starting cholesterol
+group2 last subject ending cholesterol
+number of subjects in group 3
+group3 subject1 starting cholesterol
+group3 subject1 ending cholesterol
+ . . . . . 
+group3 last subject starting cholesterol
+group3 last subject ending cholesterol
+. . . .
+number of subjects in the last group 
+last group subject1 starting cholesterol
+last group subject1 ending cholesterol
+last group subject2 starting cholesterol
+last group subject2 ending cholesterol
+ . . . . . 
+last group last subject starting cholesterol
+last group last subject ending cholesterol
+For example, the following data file is for three groups. The first group has 2 subjects in it, the second group has 3 subjects in it, and the last group has 1 subject:
+
+3
+2
+200
+190
+212
+210
+3
+240
+220
+204
+208
+256
+230
+1
+202
+185
+Assume that the data is correct (that the counts are correct and all the data is sensible and comes in complete pairs.) Write the program so that there is any number of groups (including zero) and so that a group can have any number of subjects in it (including zero.)
+
+You program should do the following: for each group compute and print out the average of the starting cholesterol values, the average of the ending cholesterol values, and the change in the averages. For example, with the above data your program should print out something like this:
+
+Group 1  2 subjects
+  average starting cholesterol:  206
+  average final    cholesterol:  200
+  change in        cholesterol:  -6
+Group 2  3 subjects
+  average starting cholesterol:  233
+  average final    cholesterol:  219
+  change in        cholesterol:  -14
+Group 3  1 subjects
+  average starting cholesterol:  202
+  average final    cholesterol:  185
+  change in        cholesterol:  -17
+Done with processing.
+Notes: Use integer arithmetic throughout. If a group has zero subjects in it, report that fact but don't compute the averages (nor print them out.) It would be very helpful for you to plan this program in advance. The main organization of the program will be a counting loop inside of a counting loop.
+
+Use some well though out comments in your program to show how it is organized. Be sure that your indenting also shows how the program is organized.
+
+Here is another sample input file and its output:
+
+4        
+5
+230
+210
+230
+215
+230
+220
+230
+225
+230
+230
+3
+210
+200
+210
+200
+210
+200
+0
+2
+200
+190
+210
+200
+Group 1  5 subjects
+  average starting cholesterol:  230
+  average final    cholesterol:  220
+  change in        cholesterol:  -10
+Group 2  3 subjects
+  average starting cholesterol:  210
+  average final    cholesterol:  200
+  change in        cholesterol:  -10
+Group 3  0 subjects
+Group 4  2 subjects
+  average starting cholesterol:  205
+  average final    cholesterol:  195
+  change in        cholesterol:  -10
+Done with processing. 

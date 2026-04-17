@@ -1,0 +1,92 @@
+Chapter 54 Programming Exercises
+Exercise 1 — Odious Numbers
+An odious number is a nonnegative integer that has an odd number of 1s in its binary representation. The first few odious numbers are 1, 2, 4, 7, 8, 11, 13, 14, 16, 19, ... Numbers that are not odious are said to be evil numbers.
+
+Note: Odious = Odd, Evil = Even
+
+To get the bits in the binary representation of an integer repeatedly: find the remainder after division by two, and then divide by two. Do this until the division yields a zero. Note that the bits come out in right to left order. For example, the binary representation of decimal 11 is 1011
+
+11 % 2 = 1  11 / 2 = 5
+
+ 5 % 2 = 1   5 / 2 = 2
+ 
+ 2 % 2 = 0   2 / 2 = 1
+ 
+ 1 % 2 = 1   1 / 2 = 0
+Write a program that repeatedly asks the user for a nonnegative integer and then says if it is odious or evil. End the run when the user enters a negative integer. Use a static method that determines if its long parameter is odious and returns true or false. Your main method will be almost identical to the FactorialTester program in this chapter.
+
+Weisstein, Eric W. "Odious Number." From MathWorld. http://mathworld.wolfram.com/OdiousNumber.html
+
+Click here to go back to the main menu.
+
+Exercise 2 — Unlucky Numbers
+An unlucky number is a nonnegative integer whose decimal representation contains digits 1 and 3 in sequence left to right.
+
+    13 is unlucky
+   513 is unlucky
+  1307 is unlucky
+813015 is unlucky
+134130 is unlucky
+
+  103 is safe
+   31 is safe
+41237 is safe
+To get the digits in the decimal representation of an integer repeatedly do this: find the remainder after division by ten, and then divide the number by ten. Do this until the division yields a zero. The digits come out in right to left order.
+
+Use the Java % operator to get the integer remainder, then the / operator to get the integer quotient.
+
+For example, to get the digits of 1307 one by one, do this:
+1307 % 10 = 7     1307 / 10 = 130
+
+ 130 % 10 = 0      130 / 10 = 13
+ 
+  13 % 10 = 3       13 / 10 = 1
+  
+   1 % 10 = 1        1 / 10 = 0  
+Write a program that repeatedly asks the user for a non-negative integer and then says if it is unlucky or safe. End the run when the user enters a negative integer. Use a static method that determines if its long parameter is unlucky and returns true or false. Your main method will be almost identical to the FactorialTester program in this chapter.
+
+This program is similar to a program on a past AP Computer Science test.
+
+Another way to determine if an integer is unlucky is to convert it to a string, and then inspect the characters of the string from left to right looking for the sequence "13". (Or use a String method.) However, this is much slower than the above.
+
+Click here to go back to the main menu.
+
+Exercise 3 — Unlucky Evil Numbers
+Write a program that determines if any unlucky numbers are also evil. Do this by writing a main program that contains a counting loop from one to some upper limit. For each loop counter test if it is unlucky and if so test if it is evil. Use the static functions you wrote for the above two exercises.
+
+Click here to go back to the main menu.
+
+Exercise 4 — Perfect Numbers
+A perfect number is a positive integer who's proper divisors add up to the integer itself. A proper divisor of N is a positive integer less than N that divides N with no remainder. For example, 3 is a proper divisor of 6 because 3 divides 6 with no remainder. 1 is a proper divisor of all positive integers.
+
+6 is a perfect number because its proper divisors are 1, 2, and 3 and 1+2+3 = 6.
+
+12 is not perfect because its proper divisors are 1, 2, 3, 4, 6 and 1+2+3+4+6 = 16
+
+Write a program that finds all perfect numbers less than an upper limit entered by the user. Use a static method that tests if its parameter is perfect and returns true or false.
+
+Click here to go back to the main menu.
+
+Exercise 5 — Factorial with Error Flag
+Factorial as written in this chapter easily reaches overflow, but gives no indication of when this happens. But we know (from testing) that it overflows when its parameter is 21 or above. Sometimes the overflow result is negative and sometimes positive. Also, factorial for a negative integer is not defined.
+
+Modify the factorial method so that it immediately returns a -1 when the parameter is less than zero or more than 20. Modify the main method to test the result and to print an error message when the result is negative.
+
+A more elegant way to report errors is with Exceptions. But this is a topic of a future chapter.
+
+Click here to go back to the main menu.
+
+Exercise 6 — Combinations
+The number of combinations of N things taken R at a time is
+
+NCR = N! / (R!*(N-R)!)
+Write a program that asks the user for N and R and writes out NCR. Use the error-flagging version of factorial in exercise 5 and report an error if a factorial can't be computed. This means that N cannot be larger than 20, which is a severe restriction.
+
+If you want, figure out a way to compute NCR without explicitly computing the factorials. Many numbers cancel between the numerator and the denominator.
+
+Click here to go back to the main menu.
+
+Exercise 7 — Max of Eight (brain teaser)
+The maxEight() method in the chapter calls maxTwo() seven times with various parameters. This means that the greater-than comparison operator >in maxTwo() is executed seven times.
+
+It is possible to find the maximum of eight integers with less than seven comparisons? Write a maxEight() methods that has eight parameters, returns the maximum value, but does not call any other methods. Use nested if-statements. How many do you need?

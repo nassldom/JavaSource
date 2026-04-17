@@ -1,0 +1,120 @@
+Chapter 19 Programming Exercises
+Exercise 1 — Run of Integers
+Write a program that asks the user for a starting value and an ending value and then writes all the integers (inclusive) between those two values.
+
+Enter Start:
+5
+Enter End:
+9
+
+5
+6
+7
+8
+9
+Click here to go back to the main menu.
+
+Exercise 2 — Sum of Sequential Integers
+Write a program that asks the user for N and then adds all the integers (inclusive) between 1 and N.
+
+Enter N:
+10
+Sum = 55
+Do this in a loop that counts up 1 to N and in each iteration adds the current count to the sum.
+
+Another way to calculate the same thing is through a formula:
+
+sum = (n*(n+1))/2
+Modify your program so that it calculates the sum both ways:
+
+Enter N:
+10
+Loop Sum = 55
+Formula Sum = 55
+The sum of sequential integers 1 to N is called a triangle number. See the exercises for chapter 25.
+
+Click here to go back to the main menu.
+
+Exercise 3 — Sum of Sequential Squares
+Write a program that asks the user for N and then adds the squares of integers (inclusive) between 1 and N.
+
+Enter N:
+10
+Sum = 385
+Do this in a loop that counts up 1 to N and in each iteration adds the square of the current count to the sum.
+
+Another way to calculate the same thing is through a formula:
+
+sum of squares = (n*(n+1)*(2*n+1))/6
+Modify your program so that it calculates the sum both ways:
+
+Enter N:
+10
+Loop Sum = 385
+Formula Sum = 385
+For further fun, add up the cubes of the integers 1 to N. A formula for this sum is:
+
+sum of cubes = [ (n*(n+1))/2 ]2
+Notice that this is the square of the sum of integers 1 to n.
+
+Click here to go back to the main menu.
+
+Exercise 4 — Sum of a Range of Sequential Integers
+Write a program that asks the user for two integers, low and high and then sums all the integers (inclusive) low through N.
+
+Enter low:
+5
+Enter high:
+10
+Sum = 45
+Do this by noticing that the sum from low to high is the same as the sum from one to high minus the sum from one to (low-1). Calculate each of these by using the formula:
+
+sum = (n*(n+1))/2
+Click here to go back to the main menu.
+
+Exercise 5 — Repeatedly Echo a Word
+Write a program that asks the user to enter a word. The program will then repeat word for as many times as it has characters:
+
+Enter a word:
+Hello
+
+Hello
+Hello
+Hello
+Hello
+Hello
+To do this you will need to use the length() method of String that counts the number of characters in a string:
+
+String inputString;
+int times;
+
+ . . . .
+
+times = inputString.length()
+Click here to go back to the main menu.
+
+Exercise 6 — Words Separated by Dots
+Write a program that asks the user to enter two words. The program then prints out both words on one line. The words will be separated by enough dots so that the total line length is 30:
+
+Enter first word:
+turtle
+Enter second word
+153
+
+turtle....................153
+This could be used as part of an index for a book. To print out the dots, use System.out.print(".") inside a loop body.
+
+Click here to go back to the main menu.
+
+Exercise 7 — One Letter per Line
+Write a program that asks the user to enter a word. The program then writes that word one character per line:
+
+Enter a word: turtle
+t
+u
+r
+t
+l
+e
+Use the length() method that counts the number of characters in a string and the charAt( int index ) that returns the character at index. Recall that String indexes start at zero.
+

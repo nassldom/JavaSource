@@ -1,0 +1,54 @@
+Exercise 1 — Check Charge
+A bank has the following rule: if a customer has more than $1000 dollars in their checking account or more than $1500 dollars in their savings account, then there is no service charge for writing checks. Otherwise there is a $0.15 charge per check. Write a program that asks for the balance in each account and then writes out the service charge.
+
+Click here to go back to the main menu.
+
+Exercise 2 — Tire Pressure
+The front tires of a car should both have the same pressure. Also, the rear tires of a car should both have the same pressure (but not necessarily the same pressure as the front tires.) Write a program that reads in the pressure of the four tires and writes a message that says if the inflation is OK or not.
+
+Input right front pressure
+38
+Input left front pressure
+38
+Input right rear pressure
+42
+Input left rear pressure
+42
+
+Inflation is OK
+Click here to go back to the main menu.
+
+Exercise 3 — More Tire Pressure
+Its not enough that the pressures are the same in the tires, but the pressures must also be within range. Modify the program in exercise 1 so that it also checks that each tire has a pressure between 35 and 45. If a tire is out of range, write out an error message immediately, but continue inputting values and processing them:
+
+Input right front pressure
+32
+Warning: pressure is out of range
+
+Input left front pressure
+32
+Warning: pressure is out of range
+
+Input right rear pressure
+42
+Input left rear pressure
+42
+
+Inflation is BAD
+If there have been any warnings, write out a final error message. (To do this, declare a boolean variable goodPressure that is initialized to true but is changed to false when an out of range tire is first found.)
+
+Click here to go back to the main menu.
+
+Exercise 4 — The Pressure is Building
+Tires don't have to have exactly the same pressure. Modify the program so that the front tires can be within 3 psi of each other, and the rear tires can be within 3 psi of each other and all tires have a pressure between 35 and 45 psi.
+
+Input right front pressure
+35
+Input left front pressure
+37
+Input right rear pressure
+41
+Input left rear pressure
+44
+
+Inflation is OK

@@ -1,0 +1,8 @@
+Exercise 1 — Object Created at Run Time
+Write a program that creates a String object that contains the string "Hello World" (or some other favorite string). Assign the reference to the object to the reference variable str. Write the characters of the object to the monitor:
+
+System.out.println( str );
+Run the program to confirm that it works as you expect. Now add a second reference variable to the program, but don't create an object for it to refer to. Add a statement that uses the second variable as if it held a valid object reference. Run the program, and see what happens:
+
+System.out.println( secondVariable );
+Play around with this program for a while to cement the notion in you head that an object and its reference variable are different things, and that an object is created at run time.

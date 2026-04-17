@@ -1,0 +1,59 @@
+Chapter 71 Programming Exercises
+Many of your programs from previous chapters can be used with file input and output without modification. Pick a few of them and play. Perhaps make a few modifications, such as removing prompts.
+Exercise 1 — Maximum
+Write a program that reads 5 integers from a file, computes their sum and maximum and prints these values to the screen. Do this by modifying the summing program from the chapter. Insert a new int variable called max which you should initialize to the first value in the file. This will call for an extra set of input statements before the loop starts. To compute the maximum you will need an if statement nested inside the loop. 
+
+Click here to go back to the main menu.
+
+Exercise 2 — AddUp
+Write a program that adds up all the integers in a file. Assume that the file has one integer (as text) per line, but may have any number of integers. The last integer in the file will be a sentinel value that shows the end of data. Use a sentinel value of -999.
+
+A better program would use Exceptions to deal with end of file.
+
+Click here to go back to the main menu.
+
+Exercise 3 — Optional Prompts
+Modify the program that adds five integers so that it first asks if further prompts are desired. The user enters "yes" or "no" (just once, at the beginning). Now the loop either prompts or does not prompt for each of the integers to be input.
+
+Of course, now the input file should start with the line
+
+no
+to turn off prompts.
+
+You will need to use the equals() method of String. Set a boolean variable to true or false depending on the user's first input string. There will be an if statement inside the loop that determines if a prompt is written.
+
+Click here to go back to the main menu.
+
+Exercise 4 — Large File Creation
+Write a program that asks the user for how many integers they want and then writes out that many random integers to to monitor. Make the random integers in the range -1000 to +1000. At the end of output, write out -999 twice in a row.
+
+For example, the output might look like this:
+
+34
+-23
+465
+0
+0
+954
+-999
+56
+-285
+....
+86
+46
+-999
+-999
+Pretend that the integers are useful data from some source, except the last two -999 are not part of the data.
+
+Use output redirection to copy the data to a file. Make the file big, perhaps 500 integers.
+
+Click here to go back to the main menu.
+
+Exercise 5 — Large File Reading
+Write a program that reads integers and computes their sum and average. Use a sentinel-controled loop. But now the sentinel is not just one value, but the value -999 twice in a row. This partially avoids the difficulty with sentinel-controlled loops where the sentinel value might be included in the data. The data for the file could come from the file created in Exercise 4.
+
+Now if a single -999 is actually part of data it will go into the sum and average. The last two -999 are not data and neither should go into the sum. (If the actual data includes two values -999 the user should keep them separate.)
+
+Use input redirection (or the PowerShell method) to send data to the program.
+
+Math Note: if the numbers in the file have been randomly selected from a uniform distribution of -N to +N, the average should be close to zero. See if this is what you get. The more numbers that go into the average, the closer the average will be to zero.

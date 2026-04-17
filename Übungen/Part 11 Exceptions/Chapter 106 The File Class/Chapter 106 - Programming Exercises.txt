@@ -1,0 +1,59 @@
+Programming Exercises
+Note: Make a new directory (folder) for these programs, and be prepared to loose everything in it.
+
+Exercise 1 – File Concatenation Program
+Write a program that creates a new file by concatenating several files together. The command line looks like this:
+
+java fileCat source0 source1 source2 ... newFile
+There can be one or more source files on the command line. Each source file must exist (if not, write an error message and exit). The last file name on the line, newFile, is the name of the file to be created, and must not already exist.
+
+Create the new file by opening the source files one at a time, in order, reading each file byte-by-byte and writing each byte to newFile. Close each file when it is no longer needed. Use buffered input and buffered output.
+
+Although each source file must exist, it is acceptable for a source file to be empty (so the first read encounters end-of-file).
+
+If you don't like command lines, use interactive user prompts, or write a GUI interface. A frequent program style is to do it both ways: Check the command line; if it is OK, proceed. If there are no arguments get file names by prompting the user.
+
+Click here to go back to the main menu.
+
+Exercise 2 – File Splitting Program
+Sometimes you have a file that you would like to put on a floppy disk but it is too big. Perhaps you want to copy the file from one computer to another and floppy disks are your only means of transfer. It would be useful to split the long file into several short files that each fit on a floppy. After transfer to the other computer the short files can be concatenated into a copy of the original.
+
+The command line for this program is:
+
+java fileSplit bigFile baseName chunkSize
+bigFile is the name of the big, existing file. Each small file will be named baseName with a number appended to the end. For example, if baseName is "chop" then the small files are "chop0", chop1", "chop2", and so on for as many as are needed.
+
+chunkSize is the size in bytes of each small file, except for the last one.
+
+For testing, use any file for bigFile, no matter what size, and any size for chunkSize. Use the file concatenation program to put the file together again. See if there are any changes with a file comparison program. (Such as Unix's dif, MS Win's comp, or the next program).
+
+For preliminary testing, use text files. However, write the program so that it works with any file (use byte-oriented IO). For advanced testing, split an executable file, then reassemble then run it. Or split and reassemble an image file, and view the results.
+
+Click here to go back to the main menu.
+
+Exercise 3 – Text File Comparison Program
+Write a program that compares two text files line by line. The command line looks like this:
+
+java fileComp file1 file2 [limit]
+Read in a line from each file. Compare the two lines. If they are identical, continue with the next two lines. Otherwise, write out the line number and the two lines, and continue.
+
+Frequently when two files differ there are very many lines that are different and you don't want to see them all. The last argument, limit, is optional (that is what the brackets mean). It is an integer that says how many pairs of different lines to write before quitting. If limit is omitted all differing lines are written. Catch the NumberFormatException that may be thrown if limit can't be converted.
+
+Click here to go back to the main menu.
+
+Exercise 4 – Backup Utility
+Write a program that backs up all the files in a directory by creating a new subdirectory (of the current directory) called backUp0 and by copying all files of the current directory into it. The file names of the copies are the same as in the current directory.
+
+If backUp0 already exists, then create backUp1, and so on. Use byte-oriented IO so files of all types are backed up. Use the list() method of File to get a list of files and directories. Use the isFile() method to determine which of the list are files. Use mkdir() to create the new directory.
+
+If a file cannot be read (check this with canRead()), write a warning message and continue. The program is invoked from the command line:
+
+java backUp
+This is a useful program (once you have thoroughly tested it). It is convenient to quickly backup everything in a directory by typing a short command. The same backup directory could be created by other means, but they take more keystrokes. Of course, this does not protect against disk failure, but it does protect against accidental deletion.
+
+This program will take some time to write, mostly because of picky details.
+
+Click here to go back to the main menu.
+
+Exercise 5 – Purge Utility
+Continued use of the Backup Utility results in too many backup directories, which take up disk space. Write a Purge utility which deletes all backup directories (and the files within them) of the current directory, except for the highest numbered backup directory.

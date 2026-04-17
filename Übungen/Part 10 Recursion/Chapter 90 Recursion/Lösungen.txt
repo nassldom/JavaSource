@@ -1,0 +1,167 @@
+1 – Papier so falten, dass 64 kleine Quadrate entstehen
+64 Quadrate = 
+8
+×
+8
+8×8. Denke rekursiv: verdopple die Unterteilung in jeder Richtung.
+
+Basisfall: Das Papier ist in 
+1
+×
+1
+1×1 eingeteilt (keine Faltung nötig).
+
+Rekursiver Schritt:
+
+Falte das Papier einmal in der Mitte horizontal und wieder auf.
+
+Falte das Papier einmal in der Mitte vertikal und wieder auf.
+
+Jetzt hast du ein 
+2
+×
+2
+2×2 Muster. Um von 
+n
+×
+n
+n×n auf 
+2
+n
+×
+2
+n
+2n×2n zu kommen:
+
+Falte das Papier einmal in jeder Richtung, sodass jede Seite halbiert wird.
+
+Wiederhole den Vorgang, bis die Kanten in 8 gleiche Abschnitte geteilt sind.
+
+Rekursiv formuliert: „Wenn die Kante noch nicht in 8 Stücke unterteilt ist, falte sie einmal in der Mitte und wiederhole mit jeder Hälfte.“
+
+2 – Farbe im Eimer umrühren
+Basisfall: Die Farbe ist homogen (keine sichtbaren Schlieren oder Farbschichten).
+
+Rekursiver Schritt:
+
+Rühre vom Boden zur Oberfläche eine definierte Anzahl Umdrehungen (z.B. 10 Mal).
+
+Prüfe, ob noch „Streifen“/Farbunterschiede sichtbar sind.
+
+Wenn ja, wiederhole: „Rühre 10 Mal und prüfe erneut.“
+
+Rekursiv: „Rühre ein Stück, überprüfe Zustand, rufe dich selbst auf, wenn noch nicht gut gemischt.“
+
+3 – Ein 1000‑seitiges Buch lesen
+Basisfall: Es sind keine Seiten mehr übrig (du bist über die letzte Seite hinaus).
+
+Rekursiver Schritt:
+
+Lies die aktuelle Seite aufmerksam.
+
+Wechsle zur nächsten Seite.
+
+Rufe „lies den Rest des Buchs“ auf der verbleibenden Seitenzahl auf.
+
+Rekursiv: readBook(page): Wenn page > 1000, stoppe; sonst lies page, dann readBook(page+1).
+
+4 – 60‑minütigen langweiligen Vortrag durchhalten
+Basisfall: Die verbleibende Zeit ist 0 Minuten.
+
+Rekursiver Schritt:
+
+Wähle eine kleine Zeiteinheit, z.B. 1 Minute.
+
+Höre (oder tue so, als ob du zuhörst) für 1 Minute.
+
+Reduziere die verbleibende Zeit um 1 Minute.
+
+Wiederhole: „sitze noch eine Minute durch“, bis die Zeit 0 ist.
+
+Rekursiv: sitLecture(t): wenn t == 0, geh nach Hause; sonst sitze 1 Minute und rufe sitLecture(t-1).
+
+5 – Graben für einen Elefanten ausheben
+Basisfall: Das Volumen des Grabens ist groß genug (Länge, Breite und Tiefe sind erreicht).
+
+Rekursiver Schritt:
+
+Entferne eine Schaufel Erde (oder eine definierte Schicht) aus dem Bereich, der noch zu flach/zu klein ist.
+
+Miss Länge, Breite und Tiefe erneut.
+
+Wenn noch nicht groß genug, wiederhole mit dem verbleibenden Volumen, das zu wenig tief/zu kurz/zu schmal ist.
+
+Rekursiv: „Grabe eine Schicht, prüfe Maße, grabe weiter im Bereich, der noch nicht tief genug ist.“
+
+6 – Auto wachsen, bis alles glänzt
+Basisfall: Jede Oberfläche des Autos ist sauber gewachst und glänzt.
+
+Rekursiver Schritt:
+
+Wähle eine noch nicht gewachste Fläche (z.B. Tür, Motorhaube, Dach).
+
+Trage Wachs auf diese Fläche auf und poliere, bis sie glänzt.
+
+Markiere die Fläche als „fertig“.
+
+Wiederhole den Vorgang für die verbleibenden Flächen, bis keine mehr übrig ist.
+
+Rekursiv: waxAll(panels): wenn Liste leer, fertig; sonst nimm erstes Panel, wachse es, rufe waxAll(rest).
+
+7 – Jedes Gehege im Zoo besuchen
+Basisfall: Es gibt keine unbesuchten Gehege mehr auf deiner Liste.
+
+Rekursiver Schritt:
+
+Nimm das nächste unbesuchte Gehege aus der Liste.
+
+Geh zu diesem Gehege und schau es dir an.
+
+Markiere es als „besucht“.
+
+Wiederhole mit der Liste der verbleibenden Gehege.
+
+Rekursiv: visitAll(enclosures): wenn leer, fertig; sonst visit(first); visitAll(rest).
+
+8 – Eine Literflasche Traubensaft austrinken
+Basisfall: Die verbleibende Flüssigkeitsmenge ist 0 ml.
+
+Rekursiver Schritt:
+
+Trinke einen kleinen Schluck (z.B. 10 ml).
+
+Reduziere die Restmenge entsprechend.
+
+Wiederhole mit der neuen Restmenge.
+
+Rekursiv: drink(volume): wenn volume <= 0, stoppe; sonst trinke etwas und rufe drink(volume - schluck).
+
+9 – Ein Loch Golf spielen (Ball von Tee bis Loch)
+Basisfall: Der Ball ist im Loch (oder innerhalb des erlaubten Radius).
+
+Rekursiver Schritt:
+
+Analysiere die aktuelle Position (Entfernung zum Loch, Hindernisse).
+
+Wähle einen Schlag (Schläger + Richtung + Stärke).
+
+Führe den Schlag aus, aktualisiere die Ballposition.
+
+Wenn der Ball noch nicht im Loch ist, wiederhole mit der neuen Position.
+
+Rekursiv: playHole(position): wenn position == hole, ende; sonst hit(); playHole(newPosition).
+
+10 – Alle Aufgaben in einer Aufgabenliste bearbeiten
+Basisfall: In der Liste der Übungen ist keine Aufgabe mehr übrig.
+
+Rekursiver Schritt:
+
+Nimm die erste Aufgabe in der Liste.
+
+Löse diese Aufgabe vollständig.
+
+Entferne sie aus der Liste (oder markiere sie als erledigt).
+
+Wiederhole mit der Liste der restlichen Aufgaben.
+
+Rekursiv: solveAll(exercises): wenn leer, fertig; sonst solve(first); solveAll(rest).

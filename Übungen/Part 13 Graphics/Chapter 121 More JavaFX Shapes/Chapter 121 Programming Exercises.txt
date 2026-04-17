@@ -1,0 +1,57 @@
+Chapter 121 Programming Exercises
+Exercise 1 — Triangle
+four circles in four quadrants
+Write an program that displays a triangle where the two lower vertices are the centers of the lower left and lower right quadrants and the peak of the triangle is one quarter of the way down the (imaginary) vertical line that divides the scene.
+
+Calculate each of the vertices based on the variables that contain the width and height of the scene.
+
+Click here to go back to the main menu.
+
+Exercise 2 — Four Circles
+four circles in four quadrants
+Write an program that displays four circles in a square window. Each circle is centered in one of the four quadrants and each circle is a different color of your choice. Pick a radius that is the same for all circles. Calculate the size of the Scene based on the radius. Use Color constants or define your own colors.
+
+This is the same program as one in the previous chapter. But this time, use the transformations setTranslateX() and setTranslateY().
+
+Click here to go back to the main menu.
+
+Exercise 3 — Evergreen Tree
+Evergreen Tree
+Draw an evergreen tree using three overlapping triangles and a rectangle. Remember that the order that the shapes are drawn determines which is geometrically on top of which.
+
+The ground is a Polygon. Add yellow sunbeams around the sun, if you want.
+
+Click here to go back to the main menu.
+
+Exercise 4 — Cylinder
+View of Cylinder
+Write an program that displays a cylinder viewed from the side. The sides of the cylinder (in the picture) is a rectangle. The top and bottom are ellipses. If you draw them in the right order, the result is a cylinder.
+
+Make the cylinder a Group with its top left corner at (0,0). Make the top of the cylinder a Ellipse with its center at the center of the top line of the rectangle. Make the radius of the cylinder ends 1.0 and the height of the cylinder 1.0. Then use X and Y translation to move it to the center of the window.
+
+View of Cylinder with back edge Hidden
+You may wish to make only the front edge of the bottom visible. Do this by drawing the bottom Ellipse with a transparent stroke and using an Arc with ArcType.OPEN to draw the bottom edge.
+
+Click here to go back to the main menu.
+
+Exercise 5 — Nested Squares
+Many Rectangles
+Draw N nested open squares. The margin around each square is gap pixels. The inner-most square is 2*gap by 2*gap. Make it easy to change N and gap. The value for N determines the size of the window.
+
+Use Color.TRANSPARENT for the fill of each square. Pick a random color for the stroke of each square. Experiment with various ways to change the size of each sequential square.
+
+Put the squares into a StackPane so that they are automatically centered.
+
+Click here to go back to the main menu.
+
+
+Exercise 6 — Random Circles
+Many Random Circles
+Draw N randomly positioned circles each with a random fill color. Make the stroke color a darker version of the fill color. The radius should systematically decrease from a maximum value to a minimum value. Allow the circles to overlap, but draw complete circles, not cut off by the edges of the window. Do this by ensuring that the x and y of each circle is more than the length of the radius away from an edge.
+
+Click here to go back to the main menu.
+
+
+Exercise 7 — Rotated Ellipses
+Rotated Open Ellipses
+Draw N ellipses centered in the window, each rotated by 180/N degrees. Make the fill color TRANSPARENT. Pick a random stroke color for each ellipse.

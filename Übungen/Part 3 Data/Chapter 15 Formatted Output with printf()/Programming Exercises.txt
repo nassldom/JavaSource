@@ -1,0 +1,37 @@
+Most programming exercises from other chapters could be improved by using printf() in place of the usual println(). See also the exercises for chapter 14 which can be done without reading that chapter.
+
+1.   A fact from calculus is that
+
+(1 + 1/x)x
+gets closer and closer the the value 2.71828... as x gets larger and larger. This value is so useful in math that it has a name: e. It is the base for natural logarithms. (But don't worry: you don't need to do math to write this program.)
+
+Write a program that calculates this value for an x entered by the user.
+
+Enter x: 40000
+Approximation to e: 2.7182479 
+x gets very large before e gets close to its true value. To raise val to a power, import java.lang.Math and use
+
+Math.pow( val, power )
+which takes double precision arguments and returns a double precision value
+
+2.   Everyone's favorite trig identity is
+
+sin( θ )2 + cos( θ )2 = 1
+In math books this is usually written
+
+sin2( θ ) + cos2( θ ) = 1
+Write a program that demonstrates this. Prompt the user for an angle in degrees, then print out the sum of the two squares.
+
+ 
+Input an angle: 37.5
+sin(37.50)   is:  0.61
+cos(37.50)   is:  0.79
+sin(37.50)^2 is:  0.37
+cos(37.50)^2 is:  0.63
+sum          is:  1.00
+A problem is that Math.sin( rad ) and Math.cos( rad ) expect angles in radians. There are 360 degrees in a circle and 2π radians in a circle. To convert an angle from degrees to radians, multiply degrees by 2π/360.
+
+Another way to do this is with:
+
+Math.toRadians(deg)
+To square a value, multiply it by itself (using *). Using Math.pow() is unneeded complication for squaring.

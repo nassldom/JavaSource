@@ -1,0 +1,93 @@
+Chapter 62 Programming Exercises
+These exercises create a class, Weight that contains an array of the weight of an individual taken on successive days for one month.
+
+Exercise 1 — Constructor
+Complete the constructor in the following program so that it makes a new array data, then copies values from the parameter init into data.
+
+You want a new array to be part of the Weight object. You don't want a Weight object to merely point to the array in main(). So saying data = init would not be correct. If you did that, the object would depend on what main() might do with its array.
+
+Next complete the toString() method.
+
+ 
+class Weight
+{
+  private int[] data;
+  
+  // Constructor
+  public Weight(int[] init)
+  {
+    // Make data the same length
+    // as the array referenced by init.
+    data = new ....
+    
+    // Copy values from the 
+    // input data to data.
+    for (int j.....)
+    {
+      data[j] = 
+    }
+  }
+  
+  //Print
+  public String toString()
+  {
+ 
+ 
+  }
+}
+
+public class WeightTester
+{
+  public static void main ( String[] args )
+  {
+    int[] values = { 98,  99,  98,  99, 100, 101, 102, 100, 104, 105,
+                    105, 106, 105, 103, 104, 103, 105, 106, 107, 106,
+                    105, 105, 104, 104, 103, 102, 102, 101, 100, 102};
+    Weight june = new Weight( values );
+    System.out.println( june );
+    values[0] = 999; // change a value  in the local array
+    System.out.println( june );  // this should print out 
+                                 // the same as the first println    
+  }
+}      
+Click here to go back to the main menu.
+
+Exercise 2 — Average
+Now add an average() method to the class. Use integer math.
+
+class Weight
+{
+  . . .
+  
+  public int average()
+  {
+    . . . 
+  }
+}
+
+public class WeightTester
+{  
+  public static void main ( String[] args )
+  {
+    int[] values = { 98,  99,  98,  99, 100, 101, 102, 100, 104, 105,
+                    105, 106, 105, 103, 104, 103, 105, 106, 107, 106,
+                    105, 105, 104, 104, 103, 102, 102, 101, 100, 102};
+                    
+    Weight june = new Weight( values );
+    int avg = june.average();
+    System.out.println("average = " + avg );
+  }
+}      
+To test your method, initialize the array to ten values that have an easily computed average.
+
+Click here to go back to the main menu.
+
+Exercise 3 — Subrange of Days
+Add a method that computes the average for a range of days. The method header looks like this:
+
+public int subAverage( int start, int end )
+Make the range inclusive, that is, add up all days from start to and including end.
+
+Keep in mind that the first day of the month is at index 0 of the array. Check your results, then debug your method.
+
+In the main() method, use this method to compute the average of the first half of the month and then the second half of the month. Print out both averages and the difference between them. If the month has an odd number of days include the middle day in both averages.

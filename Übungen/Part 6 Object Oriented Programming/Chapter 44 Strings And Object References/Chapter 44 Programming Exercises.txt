@@ -1,0 +1,162 @@
+Chapter 44 Programming Exercises
+You might find it useful to look at the chapter after this one for some of these exercises.
+
+Exercise 1 — Name Echo
+Write a program that asks for user's name and then writes it back with the first name as entered, and the last name all in capital letters. Assume that there is only a first and last name and that they are separated by a single space character. Use the trim() method to remove possible leading spaces.
+
+C:\>java NameEcho
+Enter your name: Sherlock Holmes
+
+Sherlock HOLMES
+
+C:\>
+Look at the documentation of the String class and use these methods:
+
+int indexOf( String target )
+String substring( int startindex )
+String concat( String str ) — or use the + operator
+String toUpperCase()
+String trim()
+The program could be improved by testing if there were indeed more than one name. (Test that the value returned from indexOf() is greater than zero.) If not, merely echo the input.
+
+Click here to go back to the main menu.
+
+Exercise 2 — charAt()
+Write a program where the user enters a string, and the program echos it to the monitor with one character per line:
+
+C:\>java LinePerChar
+Enter a string:
+Octopus
+
+O
+c
+t
+o
+p
+u
+s
+To do this you will need to use the following method from class String:
+
+char charAt( int inx )
+This method returns the character that is at index inx of the String. Characters are indexed beginning at index 0.
+
+Click here to go back to the main menu.
+
+Exercise 3 — Title Applier
+Write a program that asks for the user's name and then writes that name to the monitor with either "Ms." or "Mr." in front, depending if the name is for a female or male. Assume that the only female names are
+
+Amy
+Buffy
+Cathy
+and that the only male names are
+
+Elroy
+Fred
+Graham
+All other names will be echoed without a title. The program continues looping until the user hits "enter" without first typing a name.
+
+C:\>java Title
+Enter a name:
+Amy Johnson
+Ms. Amy Johnson
+
+Enter a name:
+Fred Smith
+Mr. Fred Smith
+
+Enter a name:
+Zoltan Jones
+Zoltan Jones
+
+Enter a name:
+
+C:\>
+Hints: Use a Scanner to read user input. Uses a while loop that tests the length of the input line. Use startsWith() to test the names.
+
+Click here to go back to the main menu.
+
+Exercise 4 — Microwave Menu
+Microwave ovens usually have a keypad and display where the user enters the time as a sequence of digits. For example, if the user enters "23" this means twenty-three seconds and is displayed as "0:23". If the user enters "123" this means one minute twenty-three seconds and is displayed as "1:23". If the user enters "1530" this means fifteen minutes thirty seconds and is displayed as "15:30."
+
+Write a program that asks the user to enter the time as a sequence of digits and then displays the time as "minutes:seconds" as above. Assume that if two or fewer digits are entered that the digits represent seconds. In this case, display a zero before the colon. If three or more digits are entered, the last two represent seconds.
+
+  C:\>java Microwave
+  Enter cook time-> 123
+  Your time->  1:23
+  
+  C:\>
+  
+Click here to go back to the main menu.
+
+Exercise 5 — Documentation Printer
+Write a program that reads in lines and outputs only those lines that start with // . When a Java source file is used as input the program will echo lines that describe the program.
+
+C:\>java Extract < Hello.java
+
+// Hello World Program
+// written by Elmer
+
+// Here is the main method:
+
+C:\>
+Look at the chapter "File Input and Output" if it is not clear what the command line is doing.
+
+Hints: use a Scanner and nextLine()for input. The while loop of the program uses hasNextLine() to decide if it should continue. (Or, you can scan in a line and test its length.)
+
+Exercise 5 — Better Documentation Printer
+Write a program that reads in a source file and outputs only some lines:
+
+Lines that start with "//" are output.
+Lines that start with "/*" are output.
+Lines that start with "*/" are output.
+All lines between those that start with "/*" and "*/" are output.
+To do this, use a boolean variable that is set to true when /* is encountered and is set to false when */ is encountered. Output lines when the variable is true.
+
+Note: This program has a major design flaw because in Java comments may start with /* anywhere in a line and may end with */ anywhere in a line. Our program (as described) will miss these situations.
+
+A better program outputs comments no matter where they begin and end. If you decide to do this, study the String documentation for useful methods. indexOf() comined with substring()would be especially useful.
+
+Click here to go back to the main menu.
+
+Exercise 6 — Password Checker
+Write a program that repeatedly asks the user for a proposed password until the user enters an acceptable password. When the user enters an acceptable password, the program writes a message and exits.
+
+Acceptable passwords:
+
+Are at least 7 characters long.
+Contain both upper and lower case alphabetic characters.
+Contain at least 1 digit.
+The logic of this program can be quite tricky. Hint: use toUpperCase(), toLowerCase, and equals(). You will also need nested ifs.
+
+Here is a run of the program:
+
+
+C:\>java PasswordChecker
+Enter your password:
+snowflake
+That password is not acceptable.
+
+Enter your password:
+SnowFlake
+That password is not acceptable.
+
+Enter your password:
+snowflake47
+That password is not acceptable.
+
+Enter your password:
+Snowflake47
+Acceptable password.
+Click here to go back to the main menu.
+
+Exercise 7 — Word Triangle
+Write a program that asks the user for a word, and then writes out that word once per line but for each line replace the first character of the word with a space and remove the last character of the word. Continue until no characters are left. (You will have to be careful with words having and odd number of characters.)
+
+Enter a word -->ABARACADABARA
+ABARACADABARA
+ BARACADABAR
+  ARACADABA
+   RACADAB
+    ACADA
+     CAD
+      A

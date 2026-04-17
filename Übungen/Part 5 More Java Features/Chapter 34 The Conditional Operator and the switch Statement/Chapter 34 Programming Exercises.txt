@@ -1,0 +1,26 @@
+Chapter 34 Programming Exercises
+Exercise 1 — Character Counter
+Write a program that determines the number of consonants, vowels, punctuation characters, and spaces in an input line.
+
+Read in the line into a String (in the usual way). Now use the charAt() method in a loop to access the characters one by one.
+
+Use a switch statement to increment the appropriate variables based on the current character. After processing the line, print out the results.
+
+Click here to go back to the main menu.
+
+Exercise 2 — Character Counter with File Input
+Modify Exercise 1 so that it reads in lines from standard input, one by one. Process each line using the logic of exercise one so that after the file is processed you have the count of consonants, vowels, punctuation characters, and spaces for the entire file.
+
+After processing the file, print out the raw counts and also the percentages of each category in the file.
+
+Click here to go back to the main menu.
+
+Exercise 3 — Internet Acronymns
+Add more acronyms to the last example of the chapter. Wrap a loop around it so that the usr is repeatedly asked for input. Use some acronyms that use punctuation or have internal spaces.
+
+Extend the program so that it reads in a complete line of text from the user and outputs a complete line of text. All acronyms in the output text are replaced by the phrase they stand for. Use Scanner.hasNext() and Scanner.next() to read input tokens one by one.
+
+Click here to go back to the main menu.
+
+Exercise 4 — Random Names
+Say that you are creating a character generator for a game. Your characters need first and last names. For the first name, use a switch statement with a dozen or so cases labeled with integers. Pick a case by generating a random integer. Use a Random object for this. Use the same method to pick the last name.

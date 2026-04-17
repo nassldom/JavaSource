@@ -1,0 +1,12 @@
+Exercise 4 — Harmonic Mean
+The harmonic mean of two numbers is given by:
+
+H = 2 / ( 1/X + 1/Y )
+This is sometimes more useful than the more usual average of two numbers. Write a program that inputs two numbers (as floating point) and writes out both the usual average (the arithmetic mean) and the harmonic mean.
+
+Enter X:
+12
+Enter Y:
+16
+Arithmetic mean: 14.0
+Harmonic   mean: 13.714285714285715

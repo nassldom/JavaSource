@@ -1,0 +1,11 @@
+Exercise 3 — Correct Change
+When cashiers make change they first try to "fit" dollars into the amount you get back, then try to fit quarters (25 cent coins) into what is left over, they try to fit dimes (10 cent coins) into what is now left over, then try to fit nickels (5 cent coins) into what is left, and finally are left with a few odd cents. For example, say that your change is 163 cents:
+
+One dollar fits into 163, leaving 63 cents.
+Two quarters fit into 63 cents, leaving 13 cents.
+One dime fits into 13 cents, leaving 3 cents.
+No nickels are needed.
+Three cents are left.
+Your change is : 1 dollar, two quarters, one dime, and three cents.
+
+Write a program that reads how much change is due (in cents) and writes out that amount as dollars, quarters, dimes, nickels, and pennies. Use integers for all variables and all arithmetic. If you are stuck, do an example problem with paper and pencil.

@@ -1,0 +1,52 @@
+Chapter 46 Programming Exercises
+Exercise 1
+Modify the program in Chapter 46 so that a HelloObject object writes out the greeting as many times as there are characters in the greeting. The HelloObject class will have a constructor that allows the main() method to initialize objects to different greetings.
+
+C:\>java Hello
+Hello
+Hello
+Hello
+Hello
+Hello
+Click here to go back to the main menu.
+
+Exercise 2
+Modify the program so that class HelloObject has two greeting messages: a morning greeting and an evening greeting. There will two output methods, one for each greeting.
+
+C:\>java Hello
+Good morning World!
+Good evening World!
+Click here to go back to the main menu.
+
+Exercise 3
+Write a version of the HelloObject program where the greeting that is printed by the object is given by the user:
+
+C:\>java Hello
+Enter Greeting:
+Hello Mars!
+
+Hello Mars!
+
+C:\>
+This is actually a more interesting program than it might appear because it involves a difficult design decision: who should ask the user for the greeting, the static main() method of the HelloTester class or the Hello object? Either choice will work, but one (I think) is more logical than the other. If you can't decide, write both versions and then decide.
+
+Click here to go back to the main menu.
+
+Exercise 4
+Add another constructor to the HelloObject class that takes a HelloObject object as a parameter:
+
+HelloObject( HelloObject init )
+{
+      // initialize the new object's greeting to the same
+      // as that of the init parameter
+}
+The additional constructor will not alter its parameter (of course), merely use its data. Use "dot notation" to refer to the String inside the parameter.
+
+This program (also) is more interesting than it looks. If you write it in the obvious way, the additional constructor will initialize the greeting variable of the new object to be a reference to the same String object that the parameter object refers to. In other words, there will be one String object, with two HelloObject objects referring to it. This is OK for this program, but sometimes it is not what you want.
+
+Now modify the newly added constructor so that it makes a new String object for the new HelloObject object it is constructing. Do this by using the constructor for class String that looks like this:
+
+public String(String  value);	
+(See the Java documentation for class String.)
+
+Click here to go back to the main menu.

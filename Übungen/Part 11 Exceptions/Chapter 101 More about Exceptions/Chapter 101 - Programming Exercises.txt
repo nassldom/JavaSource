@@ -1,0 +1,145 @@
+Programming Exercises
+Exercise 1 — Stack Trace Practice
+Write a testing class TestTrace that contains the static main() method, and another class CallEg that contains three methods. The main() method will create a CallEg object and call its methodA().
+
+class CallEg
+{
+
+  public void methodA() throws ArithmeticException
+  {
+  }
+
+  public void methodB() throws ArithmeticException
+  {
+  }
+
+  public void methodC() throws ArithmeticException
+  {
+  }
+
+}
+
+public class TestTrace
+{
+
+  public static void main ( String[] args )
+  {
+    CallEg eg = new CallEg();   // use default constructor
+    try
+    {
+      eg.methodA();
+    }
+    catch ( ArithmeticException oops )
+    {
+       oops.printStackTrace();
+    }
+
+  }
+
+}
+The catch{} block in main() prints a stack trace.
+
+Put a statement in methodA() that divides by zero to create an ArithmeticException. Observe the output.
+Remove the division statement from methodA().
+Change the code so that methodA() calls methodB() which calls methodC().
+Put a statement in methodC() that divides by zero to create an ArithmeticException..
+Observe the output.
+Add to the code so that methodA() calls methodB() inside a try{} block, and methodB() calls methodC() inside a try{} block.
+In methodC() put the divide by zero statement inside a try{} block.
+After each try{} block put a catch{} block which catches the exception, prints a stack trace, and
+throws the exception object to its caller.
+Observe the output.
+Notice that the stack trace contains information about which class and which method was active at the time of the exception.
+
+Click here to go back to the main menu.
+
+Exercise 2 — More Practice
+Modify the code of the previous exercise so that you have a testing class TestTrace and three classes CallEgA, CallEgB, and CallEgC. Class CallEgA has a method which constructs a CallEgB object and calls its method. Class CallEgB has a method which constructs a CallEgC object and calls its method. The method of CallEgC divides by zero:
+
+class CallEgA
+{
+}
+
+class CallEgB
+{
+}
+
+class CallEgC
+{
+}
+
+public class TestTrace
+{
+
+  public static void main ( String[] args )
+  {
+    CallEgA eg = new CallEgA();   // use default constructor
+    try
+    {
+      eg.method();
+    }
+    catch ( ArithmeticException oops )
+    {
+       oops.printStackTrace();
+    }
+
+  }
+
+}
+
+Run the program and observe the stack trace.
+
+Click here to go back to the main menu.
+
+Exercise 3 — Only Active Methods on the Stack
+Create the following program (or better yet, copy and paste it into your editor). Run it and observe that the stack trace shows only those methods that were active at the time of the exception. (In other words, the stack trace does not show a complete history of the calls.)
+
+class Divider
+{
+  public void methodA()
+  {
+     System.out.println("Result: " + 12/4 );
+  }
+
+  public void methodB()
+  {
+     System.out.println("Result: " + 12/3 );
+  }
+
+  public void methodC()
+  {
+     System.out.println("Result: " + 12/0 );
+  }
+}
+
+
+public class TestTrace
+{
+
+  public static void main ( String[] args )
+  {
+    Divider dvdr = new Divider();
+
+    try
+    {
+      dvdr.methodA( );
+      dvdr.methodB( );
+      dvdr.methodC( );
+    }
+
+    catch ( ArithmeticException oops )
+    {
+       oops.printStackTrace();
+    }
+
+  }
+
+}
+Run the program and observe the stack trace.
+
+Click here to go back to the main menu.
+
+Exercise 4 — Insurance Program
+Change the Insurance Program so that it uses only normal programming logic to check the age and to calculate the insurance.
+
+Put in exception handling where it is appropriate: put the I/O statements inside a try{} block and catch the possible exceptions.

@@ -1,0 +1,6 @@
+Exercise 3 — Reassigning values to Variables
+Modify the program in exercise 2 so that one run of the program will evaluate and write out the value of the quadradic for three different values of X: 0.0, 2.0, and 4.0 (or any three values of your choice.)
+
+Write the program using only two variables, probably called x and value. Of course this means that you will have to put different things in these variables in different places in the program.
+
+In writing the program make use of your editor's "copy" and "paste" functions to avoid re-typing similar lines.

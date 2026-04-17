@@ -1,0 +1,39 @@
+Chapter 35 Programming Exercises
+Exercise 1 — Input File Prompt
+Write a class with a main() method that asks the user for the name of the input file to be read by the program. In a practical program, the name would then be used to access a disk file (see Part 13 of these notes.) But for this program just gather the file name.
+
+The file name must be in the correct format. File names consist of two parts, a name and an extension. The name must not contain spaces. The extension must be ".dat" (for "data"). The user is repeatedly asked for a file name until it meets the requirement.
+
+C:\>java filePrompt
+input file: glarch
+>>>file name must end with .dat<<<
+input file: my file.dat
+>>>file name must not contain spaces<<<
+input file:  .dat
+>>>file name missing<<<
+input file: myData.dat
+OK
+
+C:\>
+Use methods of the String class to manipulate the user's input.
+
+Click here to go back to the main menu.
+
+Exercise 2 — Improved Square Root Program
+Improve the first version of the square root program of the chapter by repeatedly prompting the user until the number that is entered is positive.
+
+Do this by inserting a nested do/while inside the loop body of the do/while that asks if the user wishes to continue.
+
+Improve program so that the user must respond exactly with "yes" or "no".
+
+C:\>java squareRoot
+Enter a number--> -3
+>>>number must be positive<<<
+Enter a number--> 3
+Square root of 3.0 is 1.7320508075688772
+Do you wish to continue (yes or no)? na
+>>>Please respond with (yes or no)<<<
+Do you wish to continue (yes or no)? no
+Bye
+C:\>
+In this program the main purpose, computing and printing the square root, is easily done in a few statements. However, the user interaction calls for some fairly complicated logic. This imbalance is typical of user friendly programs.

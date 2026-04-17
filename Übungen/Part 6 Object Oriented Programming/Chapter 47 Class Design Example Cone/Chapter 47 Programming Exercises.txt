@@ -1,0 +1,28 @@
+Chapter 47 Programming Exercises
+Exercise 1 — More Cone Methods
+Add two methods to the Cone class:
+
+public double slantHeight()
+s = √(r2 + h2)
+public double angle()
+evaluates to the angle at the apex of the cone
+θ = arc tan (radius/height)
+The constructor remains unchanged.
+
+Click here to go back to the main menu.
+
+Exercise 2 — Cylinder class
+right circular cylinder
+Create a class for right circular cylinders. Model it on the Cone class of the chapter. Create a testing class CylinderTester to verify that your code works.
+
+Decide on the instance variables that the class needs. Make them private. Include setter and getter methods for them.
+
+Include methods for the volume and surface area of a cylinder. The volume of a right circular cylinder is the area of its base times its height:
+
+V = πr2h
+The surface area is the area of its base, plus the area of its top, plus the area of the rectangle formed by its flattened out side:
+
+V = 2πr2 + 2πrh
+
+Click here to go back to the main menu.
+

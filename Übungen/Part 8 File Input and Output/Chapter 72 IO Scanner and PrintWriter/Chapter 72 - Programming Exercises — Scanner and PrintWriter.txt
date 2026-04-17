@@ -1,0 +1,81 @@
+Programming Exercises — Scanner and PrintWriter
+Exercise 1 — Sum of a file of Integers
+Write a program that adds all the integers in a file of text integers. This program will be similar to the ManySquares example program of the chapter and will use a similar input file. Prompt the user for the name of the input file.
+
+Click here to go back to the main menu.
+
+Exercise 2 — Average and Standard Deviation of a file of Doubles
+Write a program that computes the average and standard deviation of the text floating point numbers in a file. Use the following formulas for the average and the standard deviation of N values. The formulas compute the sum, the sum of squares, the average, the average square, the variance, and finally, the standard deviation.
+
+sum = x1 + x2  + x3 + ... + xN-1 + xN 
+
+sumSQ = x12 + x22  + x32 + ... + xN-12 + xN2 
+
+avg = sum/N
+
+avgSQ = avgSQ/N
+
+var = avgSQ - avg2
+
+sd  = var(1/2)
+The input file will contain any number text floating point numbers, similar to the following:
+
+10.5
+12.9
+9.67
+12.05
+8.23
+10.08
+10.23
+7.7
+10.4
+11.34
+Numbers could be several, or none per line, and negative numbers are perfectly OK. For debugging purposes, use a file that contains one hundred values of 10.0. (You can easily make such a file using copy and paste with your text editor.) The average should be 10.0 and the standard deviation should be 0.0.
+
+Now try a file that contains fifty values 10.0 and fifty values -10.0. The average should be 0.0 and the standard deviation should be 10.0.
+
+Click here to go back to the main menu.
+
+Exercise 3 — Number Filter
+Write a program that reads integers from a text file. The program writes out the positive integers in the input file to one output file and the negative integers to a second output file. Prompt the user for the names of all three files.
+
+Click here to go back to the main menu.
+
+Exercise 4 — Separate Sums
+Say that a text file looks like this:
+
+x= 10
+y= -45
+y= 98
+x= 13
+x= 37
+y= 36
+x= -2
+
+. . .
+Each line starts with "x=" or "y=" but which of these it starts with follows no pattern. Each of these is followed by a space then a single integer. Nothing else follows the integer on a line.
+
+Write a program that reads in this data file and computes the sum of the x values and the sum of the y values. Hint: use hasNext() and next() to read the "x=" and "y=" tokens and then use nextInt() to read the integer. You will also need the equals() method of String.
+
+Click here to go back to the main menu.
+
+Exercise 5 — Stop Word Remover
+Write a program that reads in a file of text, perhaps the text of a novel. The program copies the same text to an output file, except that all the useless words such as "the", "a", and "an" are removed. (Decide on what other words you with to remove. The list of words removed is called a stop list.) Do this by reading the text file token by token using hasNext() and next(), but only writing out tokens not on the stop list.
+
+Prompt the user for the names of the input and output files.
+
+Fairly Easy: The output file will have only N tokens per line. Do this by counting tokens as you output them. N will be something like 10 or 12.
+
+Improved Program: Preserve the line structure of the input file. Do this by reading each line using nextLine() and then creating a new Scanner for that line. (Look at the on-line documentation for Scanner.) With each line's Scanner, use hasNext() and next() to scan through its tokens.
+
+Harder: Write out no more than N characters per line. N will be something like 50. Do this by keeping count of the number of characters written out per line. The length() method of String will be useful. If X characters has already been written to the current line, and if X plus the length of the current token exceeds N, then start a new line.
+
+Click here to go back to the main menu.
+
+Exercise 6 —E-Mail Address Extractor
+write a program that scans a text file for possible e-mail addresses. Addresses look like this:
+
+someone@somewhere.net
+Read tokens from the input file one by one using hasNext() and next(). With the default delimiters of Scanner, an entire e-mail address will be returned as one token. Examine each token using the indexOf() method of String. If a token contains an at sign @ followed some characters later by a period, regard it as a possible e-mail address and write it to the output file.
+
+Programs such as this scan through web pages looking for e-mail addresses that become the targets of spam. Because of this, many web pages contain disguised e-mail addresses that can't easily be automatically extracted

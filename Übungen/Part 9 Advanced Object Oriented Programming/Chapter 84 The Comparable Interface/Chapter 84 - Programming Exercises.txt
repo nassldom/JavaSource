@@ -1,0 +1,130 @@
+Programming Exercises
+1.   Examine the following Employee class.
+
+class Employee implements Comparable<Employee>
+{
+  private String firstName;
+  private String lastName;
+   
+  private int birthYear;
+
+  String getFirstName()  { return firstName; }
+  String getLastName()   { return lastName; }
+  int    getBirthYear()  { return birthYear; }
+  
+  public Employee( String f, String last, int year )
+  {
+    firstName = f; lastName = last; birthYear = year;
+  }
+  
+  public String toString(){ finish this }
+  
+  public int compareTo( Employee other ) { finish this }
+  
+}
+Finish the compareTo() method using all three of the instance variables. Access them using the getX() methods. Compare two employees by first looking at their last names. If the last names are different, return the value that the String method compareTo() returns with the last names. If the last names are equal, look at the first names and return the value that the String method compareTo() returns. If both parts of the names are equal, return the difference of the birthYears so that the older employee precedes the younger employee. If all members of both employee are equal, return 0.
+
+Test your implementation using this class:
+
+import java.util.Arrays;
+
+class EmployeeTester
+{
+  public static void main ( String[] args )
+  {
+    Employee[] workers = new Employee[12];
+    
+    workers[0] = new Employee( "Fred", "Adams",  1963);
+    workers[1] = new Employee( "John", "Adams",  1959);
+    workers[2] = new Employee( "Elmer", "Adams",  1976);
+    workers[3] = new Employee( "Nancy", "Devon",  1963);
+    workers[4] = new Employee( "Andrew", "Lewis",  1983);
+    workers[5] = new Employee( "Douglas", "Page",  1981);
+    workers[6] = new Employee( "Donald", "Wolder",  1963);
+    workers[7] = new Employee( "Henry", "Wolder",  1972);
+    workers[8] = new Employee( "Robert", "Wolder",  1959);
+    workers[9] = new Employee( "Howard", "Cohen",  1933);
+    workers[10] = new Employee( "Howard", "Cohen",  1958);
+    workers[11] = new Employee( "Donald", "Rice",  1935);
+     
+    Arrays.sort( workers );
+    
+    for ( int j=0; j<workers.length; j++ )
+      System.out.println( workers[j].toString() );
+  }  
+
+}
+2.   Examine the following Diamond class.
+
+class Diamond implements Comparable<Diamond>
+{
+  private String stockNumber;
+  
+  private int carat;       /* size of the diamond */
+  private String clarity;  /* clarity grade of the diamond */
+  private char color;      /* color grade D-Z */
+  private String cut;      /* name of the cut */
+
+  String getStock()   { return stockNumber; }
+  double getCarat()   { return carat; }
+  String getClarity() { return clarity; }
+  char   getColor()   { return color; }
+  String getCut()     { return cut; }
+  
+  public Diamond( String s, double car, String clar, char col, String ct )
+  {
+    stockNumber = s;  carat = car; clarity = clar; color = col; cut = ct;  
+  }
+  
+  public String toString(){ finish this }
+  
+  public int compareTo( Diamond other ) { finish this }
+  
+}
+The size of a diamond is measured in carats, usually less than 5.0.
+
+The clarity grade of a diamond is a code, FL, IF, VVS1, VVS2, VS1, VS2, SI1, SI2, I1, I2, I3. The best is FL (flawless), I3 is the worst.
+
+The color grade is a one letter code, D through Z. D is the best, Z is the worst. The cut is the name of the pattern the diamond has been cut into.
+
+Finish the toString() and the compareTo() methods. Write compareTo() so that diamonds are ordered first by carat, then by clarity OR color, whichever is better for the particular diamond. Do this by converting the codes to numbers. Since there are 23 grades of color, but only 11 grades of clarity, stretch the clarity scale so it is comparable to the color scale.
+
+Write compareTo() so that better diamonds are to the left of poor diamonds. This means that
+
+goodDiamond.compareTo( poorDiamond )
+returns a negative value. Notice that large carat diamonds will appear first on the list, the reverse of the usual order for numbers.
+
+Use this testing class:
+
+import java.util.Arrays;
+
+class DiamondTester
+{
+  public static void main ( String[] args )
+  {
+    Diamond[] stones = new Diamond[16];
+    
+    stones[0] = new Diamond( "A1023", 1.0, "VS1",  'F', "brilliant");
+    stones[1] = new Diamond( "A5911", 1.1, "VVS2", 'G', "rose");
+    stones[2] = new Diamond( "C5427", 1.0, "VS1",  'D', "princess");
+    stones[3] = new Diamond( "D8307", 1.6, "SI1",  'H', "brilliant");
+    stones[4] = new Diamond( "B4825", 0.3, "I1",   'D', "rose");
+    stones[5] = new Diamond( "A1844", 2.1, "VS2",  'D', "lozenge");
+    stones[6] = new Diamond( "A3747", 3.1, "SI2",  'W', "baguette");
+    stones[7] = new Diamond( "E6393", 2.3, "VS2",  'I', "brilliant");
+    stones[8] = new Diamond( "C5619", 2.8, "VVS1", 'E', "pear");
+    stones[9] = new Diamond( "E8348", 1.4, "VS2",  'G', "brilliant");
+    stones[10] = new Diamond( "D2381", 1.7, "I3",   'G', "brilliant");
+    stones[11] = new Diamond( "C9253", 1.3, "VS2",  'H', "baguette");
+    stones[12] = new Diamond( "G3459", 2.1, "VS2",  'H', "rose");
+    stones[13] = new Diamond( "B3598", 2.4, "VVS2", 'D', "pear");
+    stones[14] = new Diamond( "D9836", 2.8, "IF",   'E', "princess");
+    stones[15] = new Diamond( "E1046", 2.2, "FL",   'E', "rose");
+       
+    Arrays.sort( stones );
+    
+    for ( int j=0; j<stones.length; j++ )
+      System.out.println( stones[j].toString() );
+  }  
+
+}

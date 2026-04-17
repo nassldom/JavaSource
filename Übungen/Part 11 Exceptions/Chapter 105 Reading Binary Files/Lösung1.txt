@@ -1,0 +1,23 @@
+Mit einem Hex‑Editor wirst du u.a. sehen:
+
+GIF: beginnt mit 47 49 46 38 39 61 → ASCII „GIF89a“.
+
+JPEG:
+
+Erste zwei Bytes immer FF D8 (SOI‑Marker)
+
+Danach häufig FF E0 (JFIF) oder FF E1 (EXIF) usw.
+
+TIFF:
+
+Little‑endian: 49 49 2A 00 („II*\0“)
+
+Big‑endian: 4D 4D 00 2A („MM\0*“)
+
+MP3:
+
+Mit ID3‑Tag: 49 44 33 („ID3“) am Anfang
+
+Ohne Tag: erstes Frame beginnt oft mit FF FB (Frame‑Sync‑Bits)
+
+Die Hex‑Dumps zeigen genau diese „Magic Bytes“ am Dateianfang.

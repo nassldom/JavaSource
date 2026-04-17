@@ -1,0 +1,123 @@
+Chapter 92 Programming Exercises
+Exercise 1: Sum of first N integers
+Write a recursive function that computes the sum of the first N integers. The base case is sum(0) = 0.
+
+Exercise 2: k-Fibonacci
+Write a recursive Fibonacci-like function where each term is the sum of the previous three terms. Eg.:
+
+1, 1, 1, 3, 5, 9, 17, 31, 57, ...
+Click here to go back to the main menu.
+
+Exercise 2: Dying Rabbits
+Assume that female rabbits live for only 4 months. Modify the math-like definition of the Fibonacci series to account for dying rabbits. Implement the new series as a Java method.
+
+First draw a chart showing the population of rabbits by month. Then deduce the new rules for the series. You will have more base cases than in the original series.
+
+Click here to go back to the main menu.
+
+Exercise 3: Rabbits mod N
+Implement the Fibonacci series modulo N. As with the usual series, each term is the sum of the previous two terms. But now the sum is the remainder after integer division by N
+
+For example, if N is 10, the series is
+
+1 1 2 3 5 8 13=3 11=1 4 5 9 14=4 13=3 7 10=0 ...
+Click here to go back to the main menu.
+
+Exercise 5: GCD
+The greatest common divisor GCD of two integers a and b is the largest integer k that divides both a and b evenly. (That is, k divides both a and b without leaving a remainder.)
+
+For example, GCD( 6, 9 ) == 3 because 3 evenly divides both 6 and 9 and no greater integer does so. Another example, GCD( 25, 55 ) == 5.
+
+Here is a math-like definition of GCD:
+
+GCD(0,N) = N
+
+GCD(A,B) = GCD( B%A, A )     % is the remainder after integer division B/A
+For example,
+
+GCD( 6, 9 ) = GCD( 9%6, 6 ) = GCD( 3, 6 )
+GCD( 3, 6 ) = GCD( 6%3, 3 ) = GCD( 0, 3 )
+GCD( 0, 3 ) = 3
+Translate the math-like definition of GCD into a Java method. Write a main() method to test it.
+
+Click here to go back to the main menu.
+
+Exercise 6: Prime numbers
+A prime number is an integer that cannot be divided by any integer other than one and itself. For example, 7 is prime because its only divisors are 1 and 7. The integer 8 is not prime because its divisors are 1, 2, 4, and 8.
+
+Another way to define prime is:
+
+prime(N)    = false, if N < 2
+
+prime(N)    = prime(N, 2)
+
+prime(N, N) = true
+
+prime(N, D) = if D divides N 
+                 false
+              else 
+                 prime(N, D+1)           
+Example:
+
+prime(4)   = prime(4,2)
+prime(4,2) = false
+Another example,
+
+prime(7)   = prime(7,2)
+prime(7,2) = prime(7,3)
+prime(7,3) = prime(7,4)
+prime(7,4) = prime(7,5)
+prime(7,5) = prime(7,6)
+prime(7,6) = prime(7,7)
+prime(7,7) = true
+Another example,
+
+prime(35)   = prime(35,2)
+prime(35,2) = prime(35,3)
+prime(35,3) = prime(35,4)
+prime(35,4) = prime(35,5)
+prime(35,5) = false
+Translate the math-like definition of prime into two Java methods that return boolean. Use the % operator to test divisibility. Put your method into a class, write a testing class, and test your program. (Look at FactorialTester.java in this chapter.)
+
+If you run your program for integers larger than about 12,000 (on a Windows system) you will run out of memory. Your program will stop running and report a StackOverflowError. This is because each activation in the activation chain requires some memory, and 12,000 activations uses up all the memory that has been reserved for this use.
+
+The method can be improved by noting that if D*D is greater than N, no greater D will divide N. Modify the definition of prime and see what difference it makes.
+
+This is not a good method for finding primes. If you really want to compute primes use iteration. Even better, use the Sieve of Eratosthenes.
+
+Click here to go back to the main menu.
+
+Exercise 5: Least Positive Residue
+The least positive residue and modular arithmetic is essential for understanding modern cryptography.
+
+Say that you have a positive integer such as 14. Call it the modulus. Say you have another integer such as 18. The least positive residue of 18 modulo 14 is the smallest positive integer k such that 18 = a*14 + k.
+
+So in this case, the least positive residue is 4 because 1*14 + 4 = 18. This is often written 18 mod 14 ≡ 4
+
+The least positive residue of 45 with modulus 14 is 3 because 3*14 + 3 = 14. This is often written 45 mod 14 ≡ 4
+
+The least positive residue of 30 with modulus 10 is 0 because 3*10 + 0 = 30. This is often written 30 mod 10 ≡ 0
+
+For any integer, the least positive residue modulus M is one of the integers 0 .. M-1.
+
+The least positive residue is always positive. The least positive residue of -17 with modulus 14 is 11 because -2*14 + 11 = -17. This is often written -17 mod 14 ≡ 11
+
+The least positive residue of -25 with modulus 10 is 5 because -3*10 + 5 = -25. This is often written -25 mod 10 ≡ 5
+
+For an argument A, and modulus M, to get the least positive residue keep subtracing M from A until the result is in the range 0 .. M-1 or keep adding M to A until the result is in the range 0 .. M-1.
+
+Recursively:
+
+leastRes( A, M ) =
+  A, if A is in the range 0..M-1
+  A-M, if A is equal or larger then M
+  A+M, if A is less than zero  
+Write a program that asks the user for the modulus M and then keeps asking for the argument A and writing out A (mod M). End the program when the user enters the same A twice in a row.
+
+For extra insight, use your program to compute the following:
+
+leastRes( 1734*595*347, 23 )
+
+leastRes( 1734, 23 )*leastRes( 595, 23 )*leastRes( 347, 23 )
+
+leastRes( leastRes( 1734, 23 )*leastRes( 595, 23 )*leastRes( 347, 23 ), 23 )

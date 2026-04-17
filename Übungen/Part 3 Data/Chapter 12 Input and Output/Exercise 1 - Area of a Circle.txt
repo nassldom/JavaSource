@@ -1,0 +1,7 @@
+Exercise 1 — Area of a Circle
+Write a program that calculates the area of a circle from its radius. The radius will be an integer read in from the keyboard. The user dialog will look like this:
+
+D:\users\default>java  CircleArea
+Input the radius: 3
+The radius is: 3 The area is: 28.274333882308138
+You will need to use the constant PI which you get by using Math.PI.

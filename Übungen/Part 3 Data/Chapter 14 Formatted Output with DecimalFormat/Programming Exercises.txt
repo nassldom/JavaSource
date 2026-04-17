@@ -1,0 +1,42 @@
+1.   Write a program that writes out a table of sines for angles -90.0 to 90.0 in increments of 15 degrees. Use one digit in the decimal fraction for the angle and 6 digits in the decimal fraction for the sine. Align the decimal points in both columns of numbers.
+
+angle      sine
+-----    --------
+-90.0	   -1.0
+-75.0	   -0.965926
+-60.0	   -0.866025
+-45.0	   -0.707107
+-30.0	   -0.5
+-15.0	   -0.258819
+  0.0	    0.0
+ 15.0	    0.258819
+ 30.0	    0.5
+ 45.0	    0.707107
+ 60.0	    0.866025
+ 75.0	    0.965926
+ 90.0	    1.0
+To align its decimal point, treat zero degrees as a special case.
+
+2.   Write a program that calculates the value of a deposit for a given initial deposit, interest rate, times interest is calculated per year, and number of years. Use the formula:
+
+V = P(1 + r/n)nt
+
+V -- value
+P -- initial deposit
+r -- interest rate as fraction (eg 0.05)
+n -- number of times per year interest is calculated
+t -- number of years
+Prompt the user for P, r, n, and t. Write out the answer accurate to cents. Put a currency sign in front of the answer.
+
+Initial deposit: 100
+Interest rate  : 0.04
+Times per year : 4
+Number of years: 18
+Value: $204.71
+Make all variables doubles. Use the method Math.pow( double a, double b) from java.lang.Math which raises a to the power b.
+
+3.   Write a program that calculates how many years it takes to double an amount of money for a given annual interest rate. Use the "Rule of 72" for this: divide 72.0 by the interest rate to get the approximate number of years it takes to double your money. For example, with 10% interest it takes about 7.2 years.
+
+Prompt the user for the interest rate, and write out the number of years, accurate to tenths. You might want to confirm the accuracy of this rule by using the previous program
+
+4.   Compute eπ - π as a double. Use Math.pow( double a, double b) from java.lang.Math which raises a to the power b. Write out the result using several different places to the right of the decimal. Try 2, 4, 8 and unlimited places.

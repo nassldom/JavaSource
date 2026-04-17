@@ -1,0 +1,8 @@
+Exercise 2 — Cents to Dollars
+Write a program that reads in a number of cents. The program will write out the number of dollars and cents, like this:
+
+D:\users\default>java  Dollars
+Input the cents:
+324
+That is  3 dollars and 24 cents.
+(Use integer arithmetic and avoid floating point arithmetic. Review the integer remainder operator % if you are unsure how to proceed.)

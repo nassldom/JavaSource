@@ -1,0 +1,52 @@
+Chapter 131 Programming Exercises
+Exercise 1 — Array to List
+Add a constructor to the class that takes an array of integers as a parameter. The nodes of the linked list get their values from the array. The value of the first node (at index 0) is the integer in array cell 0 and so on in order.
+
+public LinkedList( int[] values ) 
+Click here to go back to the main menu.
+
+
+Exercise 2 — More Nodes
+Modify the program ChainMaker on page 10 so that it creates many more Nodes and links them into a list. The traversal part of the program should work without modification.
+
+Click here to go back to the main menu.
+
+Exercise 3 — Search
+Add the method int search( int target ) that searches for a target value and returns the index of the node that contains the target, or -1 if no node contains the target.
+
+Use linear search (as described in the previous chapter) to do this.
+
+Click here to go back to the main menu.
+
+Exercise 4 — set()
+Add a set() method to the class:
+
+void set( int index, int value ) throws IndexOutOfBoundsException 
+The method changes the value of the node at location index. A node must already exist at that location. Of course, if insertFirst() puts a new node at the head of the list, then indexes of all nodes after it increase by one.
+
+Click here to go back to the main menu.
+
+
+Exercise 5 — copy()
+Add a copy() method to the LinkedList class:
+
+public LinkedList copy();
+
+Make an copy of a LinkedList. Make a copy of the object corresponding to the LinkedList class and make new copies of all the Nodes linked to it. After it is made, the copy should be completely separate of the original list, with its own nodes chained off its own headPtr variable.
+For example, this fragment creates a copy:
+
+LinkedList listA = new LinkedList();
+listA.insertFirst( 4 ); listA.insertFirst( 3 ); listA.insertFirst( 2 ); listA.insertFirst( 1 );
+
+LinkedList listB = listA.copy();  // Make a copy of listA
+To verify that the new list is a complete copy of the original delete a few nodes of the original and then traverse the copy to check that it is still intact.
+
+Click here to go back to the main menu.
+
+Exercise 6 — delete()
+In this chapter, only the first and last Nodes of a LinkedList can be deleted. Write a method that deletes all Nodes holding a particular value:
+
+public int delete( int victim );
+
+Delete all Nodes containing victim from the LinkedList. Return the number of Nodes deleted. If the list is initially empty, do nothing and return zero. If the list contains no victims return zero and don't make any changes to the list. If the first Node matches victim, change headPtr.
+This will be fairly tricky because to unlink a node from the chain you need access to the previous node.

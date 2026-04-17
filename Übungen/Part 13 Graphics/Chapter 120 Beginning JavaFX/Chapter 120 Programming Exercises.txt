@@ -1,0 +1,84 @@
+Chapter 120 Programming Exercises
+Exercise 1 — Quadrilateral
+Quadrilateral
+Draw a quadrilateral that connects the center points of the four edges of the program. Do this with four Lines. (There is a way to do this with Rectangle not yet discussed.) Use two variables that hold the width and height of the scene and base the line end points on them. Make it easy to change the size of the scene. Set the stroke width and color to something pleasing.
+
+Click here to go back to the main menu.
+
+Exercise 2 — Four Circles
+four circles in four quadrants
+Write an program that displays four circles in a square window. Each circle is centered in one of the four quadrants and each circle is a different color of your choice.
+
+Pick a radius that is the same for all circles. Calculate the size of the Scene based on the radius. Use Color constants or define your own colors.
+
+Click here to go back to the main menu.
+
+Exercise 3 — Color of the Day
+four circles in four quadrants
+Write an program that displays the color of the day in a circle centered in the window. Compute the color of the day based on today's month, day, and year. Use a constructor for Color. Exactly how you compute the color is up to you, but make it deterministic (not random.) Have the color change greatly from one day to the next. The remainder operator % may be useful for this. It's OK if the same color occurs a few times widely spaced through the year. (The above image is based on May 18, 2018, and does not change.)
+
+Get the month, day, and year like this:
+
+import import java.util.Calendar;
+...
+
+Calendar cal = Calendar.getInstance();
+int month = cal.get(Calendar.MONTH); // starts at 0
+int day = cal.get(Calendar.DAY_OF_MONTH);
+int year = cal.get(Calendar.YEAR);
+Click here to go back to the main menu.
+
+Exercise 4 — Asterisk
+Asterisk
+Draw a large asterisk * in the center of the scene by drawing five lines that radiate from the center.
+
+Each line with have the center of the pane as one of its endpoints. The other endpoint will lie on an imaginary circle of a given radius. Divide the two pi radians (or 360°) into five angles and use sine and cosine to calculate the X and Y of the endpoints. Do this in a loop.
+
+Methods you may find these useful:
+
+Math.PI
+double Math.cos( double radians )
+double Math.sin( double radians )
+double toRadians(double degrees)
+double Math.min( double a, double b)
+Pane.getChildren().add( Node n)
+For extra fun, make the number of radial lines a variable that can be changed.
+
+Chrysanthemum
+Click here to go back to the main menu.
+
+Exercise 5 — Nested Squares
+Many Rectangles
+Draw N nested open squares. The margin around each square is 5 pixels. The inner-most square is 10 by 10. Make it easy to change N. The value for N will determine the size of the window.
+
+Use Color.TRANSPARENT for the fill of each square.
+
+Click here to go back to the main menu.
+
+
+Exercise 6 — Random Circles
+Many Random Circles
+Draw N random circles, each with a random radius and random fill color. Set a minimum and maximum radius for the circles. To start, allow the circles to overlap, but only draw complete circles, not cut off by the edges of the window.
+
+Drawing N non-overlapping circles is much harder. To do this, inspect the scene graph each time a circle is about to be added to see if the proposed circle overlaps and existing one. This is when the sum of their radii is more than the distance between their centers. Unfortunately, this chapter has not told you how to inspect the scene graph.
+
+You could maintain you own array of Circles to do the same thing, though.
+
+Click here to go back to the main menu.
+
+
+Exercise 7 — Graph Paper
+Graph Paper
+Write a program that creates a sheet of graph paper. Graph paper will be useful for some of your graphics programs.
+
+Declare three constants that determine the size and spacing of the lines:
+
+final double width = 8.0;    // width in inches
+final double height = 10.5;  // height in inches
+final double dpi = 72;      // dots per inch. Another popular option is 96.
+Write the program so you can change these constants to match the setup of your monitor and printer.
+
+To actually print the image on paper, use a program like IrfanView to capture the image from your monitor and then save it to a file as a gif image. Photoshop and similar programs will also work.
+
+Sample Graph Paper
+

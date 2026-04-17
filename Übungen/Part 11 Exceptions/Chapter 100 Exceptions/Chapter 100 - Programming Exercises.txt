@@ -1,0 +1,65 @@
+Programming Exercises
+Exercise 1 — User-Friendly Division Practice
+Enhance the DivisionPractice program from the chapter:
+
+Put in a loop so that the user is repeatedly asked for the numerator and the divisor. For each set of data, the program prints out the result, or an informative error message if there is a problem (division by zero or poor input data).
+The program continues looping, even if there is a problem
+Exit the loop when data entered for the numerator start with characters "q" or "Q". Don't print out an error message in this case.
+Don't ask for the divisor if the user just asked to quit.
+Here is sample output from one run:
+
+Enter the numerator: 12
+Enter the divisor:  4
+12 / 4 is 3
+
+Enter the numerator: 12
+Enter the divisor  : 0
+You can't divide 12 by 0
+
+Enter the numerator: glarch
+You entered bad data.
+Please try again.
+
+Enter the numerator: quit
+You will need to use the method charAt() from the String class.
+
+Click here to go back to the main menu.
+Exercise 2 — Addition of Multiple Groups
+Write a program that inputs a list of numbers that are arranged into groups of various sizes. The program outputs the sum of the numbers in each group. Each group starts with a one-line descriptive phrase. The phrase can be anything that is not a number. Some groups may have zero number in them.
+
+Group A
+23
+-12
+29
+-84
+Group B
+-2
+-45
+-90
+123
+26
+19
+-5
+-30
+9
+Group C
+Last Group
+12
+-34
+23
+47
+52
+8
+Use file redirection for the input file. (Copy and past the above data to your own text file for testing.) With the above data, the program writes:
+
+Group A
+Sum = -44
+
+Group B
+Sum = 5
+
+Group C
+Sum = 0
+
+Last Group
+Sum = 108

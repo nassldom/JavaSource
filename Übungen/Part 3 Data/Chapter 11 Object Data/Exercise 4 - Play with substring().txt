@@ -1,0 +1,15 @@
+Exercise 4 — Play with substring()
+Compile and run the program from the chapter (repeated below) to confirm it works as described. Then change the 8 to some other value and check if the result is what you expect.
+
+public class StringDemo3
+{
+  public static void main ( String[] args )
+  {
+    String str = new String( "Golf is a good walk spoiled." ); // create the original object
+
+    String sub = str.substring(8); //create a new object from the original
+
+    System.out.println( sub );
+
+  }
+}

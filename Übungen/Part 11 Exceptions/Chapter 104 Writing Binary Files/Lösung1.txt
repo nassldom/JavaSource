@@ -1,0 +1,7 @@
+Die Aufgabe ist rein explorativ: Erzeuge z.B. einfache Textdateien mit Notepad und sieh dir den Hex‑Dump an. Du wirst sehen:
+
+Links: Byte‑Offsets, in Hex.
+
+Mitte: Bytes in Hex, z.B. 57 6F 72 64.
+
+Rechts: Darstellbare ASCII‑Zeichen (Word zu 57 6F 72 64).

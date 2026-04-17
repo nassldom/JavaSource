@@ -1,0 +1,70 @@
+Programming Exercises
+Exercise 1 — Play with a Hex Dump
+Use Irfanview (or other hex dump program) to examine the contents of several text files and binary files.
+
+When you examine a text file, the hex dump will show the bit patterns that represent the characters (using the ASCII scheme). The right side of the display will show the characters that are represented. For example, here is the display of a text file created with NotePad:
+
+hex dump of a text file
+It shows that the very first byte of the file contains the bit pattern 0x57 (which is 01010111) and that this pattern represents the character 'W' .
+
+Bit patterns are represented using hexadecimal notation, where every four bits form a pattern and each pattern is given a name according to this scheme:
+
+Name	0	1	2	3	4	5	6	7
+Pattern	0000	0001	0010	0011	0100	0101	0110	0111
+ 
+Name	8	9	A	B	C	D	E	F
+Pattern	1000	1001	1010	1011	1100	1101	1110	1111
+ 
+
+Click here to go back to the main menu.
+Exercise 2 — Counting Loop
+Write a program that writes a file the values 0 to 64 using data type short. (Use writeShort()). Examine the file with a hex dump.
+
+Now write a program that writes a file the values 0 to 64 using data type int. (Use writeInt()). Examine the file with a hex dump.
+
+Now write a program that writes a file the values 0.0 to 64.0 using data type double. (Use writeDouble()). Examine the file with a hex dump.
+
+Click here to go back to the main menu.
+Exercise 3 — Data Translator
+Write a program that asks the user for the name of an input text file. The text file (which could be created with NotePad) will contain integers in character format, one per line, such as follows.
+
+12
+1023
+-56
+84781
+0
+-9371
+The program also asks for the name of an output file. The program then reads the input file line by line until end of file. Each input integer is translated into int data (use Integer.parseInt()) and written to the output file using DataOutputStream.writeInt().
+
+Look at the input file and output file with the DOS command DIR and, if possible, with a hex dump program.
+
+
+C:\Programs>java  IntCopy
+Input file -->ints.txt
+Output file -->ints.bin
+
+C:\Programs>dir
+
+06/16/00  04:33p                 1,881 IntCopy.class
+06/16/00  04:33p                 1,920 IntCopy.java
+06/16/00  04:35p                    24 ints.bin
+06/16/00  04:35p                    30 ints.txt
+Write the input loop so it catches NumberFormatExceptions and echos the offending line. Here is another input file:
+
+0
+1
+2
+3
+4
+Rats, this won't work
+6
+7
+8
+And the corresponding run of the program:
+
+C:\Programs>dir
+Input file -->oops.txt
+Output file -->opps.bin
+Poor input data:Rats, this won't work
+
+C:\Programs>

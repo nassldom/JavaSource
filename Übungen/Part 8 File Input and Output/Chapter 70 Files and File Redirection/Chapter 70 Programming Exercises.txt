@@ -1,0 +1,78 @@
+Chapter 70 Programming Exercises
+Exercise 1 — Control Characters
+Write a program that writes ten x's to the screen (modify the HelloWorld.java program). Use file redirection to send the program's output to a text file. Use the DIR command (or in Unix, the ls -l command) to see how many bytes are in the file. Depending on how your operating system implements end of lines, you will see more than 10 bytes.
+
+C:\>java Hello > output.txt
+
+C:\>dir output.txt
+
+08/13/99  07:01p                    12 output.txt
+               1 File(s)             12 bytes
+                            392,968,704 bytes free
+The additional two bytes are the control characters that indicate the end of the line. On a Windows system these control characters are carriage return followed by line feed.
+
+Click here to go back to the main menu.
+
+Exercise 2 — More Control Characters
+Modify the program so that it outputs 10 lines of 10 x's. Run it, redirect the output to a file, and examine the file. (It would be a very good idea to be sure that you don't have an infinite loop before you redirect the output to a file.)
+
+
+C:\>java Hello > output.txt
+
+C:\>dir output.txt
+
+08/13/99  07:05p                    120 output.txt
+               1 File(s)             120 bytes
+                             392,968,704 bytes free
+
+The previous file has been replaced by a new file (with the same name).
+
+Click here to go back to the main menu.
+
+Exercise 3 — Appending to an Existing File
+Now run the original program 10 times in a row. In the first run create a new text file. With each additional run append the output to the first file. Check if the length is the same as in Exercise 2:
+
+C:\>java Hello > output.txt
+C:\>java Hello >> output.txt
+  . . . . . . . . . . .
+C:\>java Hello >> output.txt
+
+C:\>dir output.txt
+
+08/13/99  07:15p                    120 output.txt
+               1 File(s)             120 bytes
+                             392,968,704 bytes free
+
+The file has the same characters as the previous program that used a loop.
+
+Click here to go back to the main menu.
+
+Exercise 4 — Really Small File
+Now modify the program so that it outputs no characters. Redirect the output to a file. Is a file created (even though it contains no data?) What size is it?
+
+Click here to go back to the main menu.
+
+Exercise 5 — Text Editor
+Write a program that asks the user to enter lines of text. After each line the program echos the line to the terminal. The program finishes when the user enters a line that contains the characters //done (use a sentinel-controlled loop and the equals() method of class String.) Once the program is working, run it, and redirect the output to a file.
+
+If everything is working, try using your program to create a small Java source file by running the small editor and typing in the lines of the new program. You can correct mistakes as long as you are on the same line, but once you hit "enter" that line is committed. In the following example, the user creates the file Hello.java using the small editor, and then compiles and runs it.
+
+D:\> java TextEdit > Hello.java
+class Hello
+{
+  public static void main( String[] a )
+  {
+    System.out.println("Hello new File!");
+  }
+}
+//done
+
+D:\> javac Hello.java
+
+D:\> java Hello
+
+Hello new FIle!
+
+What is going on: As far as Java is concerned, characters read from the terminal with Scanner.nextLine() are just ordinary characters that can be read into a string. While you (the user) are entering a line of characters from the keyboard you are interacting with the operating system. It is the operating system that allows you to edit a line with backspace, delete, and other characters. Once you hit enter, the OS sends the characters to Scanner.
+
+Note: this is a short program, about 15 lines, counting everything. If your program is getting to be longer than that, you are somehow making it more complicated than it needs to be.

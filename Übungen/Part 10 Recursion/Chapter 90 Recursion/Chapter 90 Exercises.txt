@@ -1,0 +1,30 @@
+Chapter 90 Exercises
+Exercise 1
+Think of a recursive way to fold a square sheet of paper so that the creases make 64 little squares.
+
+Exercise 2
+Describe with recursion how to stir a can of paint until the paint is thoroughly blended.
+
+Exercise 3
+Describe with recursion how to read a 1000 page book.
+
+Exercise 4
+Describe with recursion how to sit through a boring 60 minute lecture.
+
+Exercise 5
+Describe with recursion how to dig a ditch that is big enough to bury an elephant.
+
+Exercise 6
+Describe with recursion how to wax your car until every surface gleams.
+
+Exercise 7
+Describe with recursion how to visit every exhibit in a zoo.
+
+Exercise 8
+Describe with recursion how to drink all the fluid in a liter bottle of grape soda.
+
+Exercise 9
+Describe with recursion how to play one hole of golf (how to move the ball from the tee to the hole).
+
+Exercise 10
+Describe with recursion how to work every exercise in a list of exercises.
